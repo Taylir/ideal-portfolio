@@ -5,6 +5,7 @@
       b. The different headers and buttons placed within. 
     3. The Nav Bar
     4. The about me section
+    5. The Projects section
 */
 
 /* (Start) 1. Global Variables */
@@ -381,6 +382,197 @@ li {
 }
 
 /* (End) 4. About me */
+
+/* (Start) 5. Projects */
+
+#projects {
+  margin: 0;
+  height: 90vmin;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.card-groups,
+.card-group,
+.card {
+  aspect-ratio: 5/7;
+}
+
+.card-groups,
+.card-group,
+.big-card {
+  width: 30vmin;
+}
+
+.card-group {
+  position: absolute;
+  transition: transform 400ms ease;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  position: absolute;
+  transition: transform 800ms cubic-bezier(0.05, 0.43, 0.25, 0.95);
+}
+
+.big-card {
+  border-radius: 1vmin;
+}
+
+.little-card {
+  width: 12vmin;
+  border-radius: 2vmin;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.big-card:nth-child(2) {
+  background-color: rgba(52, 80, 250, 0.3);
+  transform: translateX(-10%) rotate(-1deg);
+}
+
+.card-group[data-index="1"] > .big-card:nth-child(2) {
+  background-color: rgba(200, 240, 80, 0.03);
+}
+
+.card-group[data-index="2"] > .big-card:nth-child(2) {
+  background-color: rgba(120, 160, 160, 0.03);
+}
+
+.big-card:nth-child(4) {
+  background-color: rgba(52, 256, 250, 0.3);
+  transform: rotate(2deg);
+}
+
+.card-group[data-index="1"] > .big-card:nth-child(4) {
+  background-color: rgba(132, 86, 70, 0.3);
+}
+
+.card-group[data-index="2"] > .big-card:nth-child(4) {
+  background-color: rgba(212, 186, 150, 0.3);
+}
+
+.big-card:nth-child(6) {
+  background-color: rgba(256, 80, 250, 0.3);
+  transform: translateX(-6%) rotate(-3deg);
+}
+
+.card-group[data-index="1"] > .big-card:nth-child(6) {
+  background-color: rgba(86, 160, 70, 0.3);
+}
+
+.card-group[data-index="2"] > .big-card:nth-child(6) {
+  background-color: rgba(166, 240, 150, 0.3);
+}
+
+.big-card:nth-child(8) {
+  background-color: rgba(0, 20, 150, 0.3);
+  transform: translate(10%, 3%) rotate(5deg);
+}
+
+.card-group[data-index="1"] > .big-card:nth-child(8) {
+  background-color: rgba(80, 100, 230, 0.3);
+}
+
+.card-group[data-index="2"] > .big-card:nth-child(8) {
+  background-color: rgba(160, 180, 54, 0.3);
+}
+
+.little-card:nth-child(1) {
+  background-color: rgba(52, 80, 250, 0.3);
+}
+
+.little-card:nth-child(3) {
+  background-color: rgba(52, 256, 250, 0.3);
+}
+
+.little-card:nth-child(5) {
+  background-color: rgba(0, 20, 150, 0.3);
+}
+
+.little-card:nth-child(7) {
+  background-color: rgba(0, 20, 150, 0.3);
+}
+
+.card-group:hover > .big-card:nth-child(2) {
+  transform: translate(-75%, 16%) rotate(-24deg);
+}
+
+.card-group:hover > .big-card:nth-child(4) {
+  transform: translate(-25%, 8%) rotate(-8deg);
+}
+
+.card-group:hover > .big-card:nth-child(6) {
+  transform: translate(25%, 8%) rotate(8deg);
+}
+
+.card-group:hover > .big-card:nth-child(8) {
+  transform: translate(75%, 16%) rotate(24deg);
+}
+
+.card-group:hover > .little-card:nth-child(1) {
+  transform: translate(200%, -160%) rotate(-15deg);
+}
+
+.card-group:hover > .little-card:nth-child(3) {
+  transform: translate(160%, 170%) rotate(15deg);
+}
+
+.card-group:hover > .little-card:nth-child(5) {
+  transform: translate(-200%, -170%) rotate(15deg);
+}
+
+.card-group:hover > .little-card:nth-child(7) {
+  transform: translate(-280%, 140%) rotate(-15deg);
+}
+
+.card-swiper__buttons {
+  margin-top: 8vmin;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 4vmin;
+}
+
+.card-swiper__buttons > button {
+  font-size: 2.5vmin;
+  border: 0.4vmin solid var(--logo-grey);
+  border-radius: 100%;
+  color: var(--logo-red);
+  background-color: transparent;
+  height: 7vmin;
+  width: 7vmin;
+  cursor: pointer;
+}
+
+.card-group[data-status="active"] {
+  transition-delay: 200ms;
+}
+
+.card-group[data-status="unknown"] {
+  transform: scale(0);
+}
+
+.card-group[data-status="after"] {
+  transform: translateX(50%) scale(0);
+}
+
+.card-group[data-status="before"] {
+  transform: translateX(-50%) scale(0);
+}
+
+.card-group[data-status="becoming-active-from-before"] {
+  transform: translateX(-50%) scale(0);
+  transition: none;
+}
+
+.card-group[data-status="becoming-active-from-after"] {
+  transform: translateX(50%) scale(0);
+  transition: none;
+}
+
+/* (End) 5. Projects */
 
 #footer {
   height: 200px;
