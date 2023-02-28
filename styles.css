@@ -7,6 +7,7 @@
 
 body {
   background-color: #242424;
+  box-sizing: border-box;
   height: 100vh;
   overflow: scroll;
   margin: 0;
@@ -24,116 +25,14 @@ li {
 
 /* Start of Nav bar */
 
-.nav__div {
-  border-bottom: 1px solid white;
-  box-shadow: inset 0 -2px 4px var(--logo-grey);
-  z-index: 50;
-}
-
-#landing__nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 80px;
-  max-width: 1180px;
-  margin: 0 auto;
-}
-
-.nav__left {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav__left > img {
-  height: 68px;
-}
-
-.nav__links {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.nav__link {
-  color: var(--logo-grey);
-  font-size: 32px;
-  padding: 0px 20px;
-  transition: color 200ms ease-in-out;
-}
-
-.nav__link:not(:first-child) {
-  border-left: 1px solid grey;
-}
-
-.nav__link:hover {
-  color: var(--logo-red);
-}
-
-.nav__link:active i {
-  transform: scale(0.9);
-}
-
-.nav__site-links {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav__site-link {
-  font-size: 18px;
-  font-weight: bold;
-  color: whitesmoke;
-  padding: 2px 16px;
-}
-
-.nav__site-link:not(:last-of-type) {
-  position: relative;
-}
-
-.nav__site-link:not(:last-of-type)::after {
-  content: "";
-  position: absolute;
-  height: 3px;
-  background-color: var(--logo-red);
-  width: 0;
-  bottom: -3px;
-  right: 0;
-  transition: all 200ms ease-in-out;
-}
-
-.nav__site-link:not(:last-of-type):hover::after {
-  left: 0;
-  width: 100%;
-}
-
-.nav__site-link:not(:first-child) {
-  border-left: 1px solid grey;
-}
-
-.nav__site-link:last-of-type > a {
-  background-color: var(--logo-red);
-  padding: 8px 16px;
-  border-radius: 16px;
-  transition: all 250ms ease-in-out;
-}
-
-.nav__site-link:last-of-type > a:hover {
-  background-color: var(--logo-grey);
-  color: var(--logo-red);
-}
-
 /* The start of the Gradient grid*/
 
 .tiles__wrapper {
-  border: 2px groove grey;
-  border-top-width: 0;
   overflow: hidden;
   background: linear-gradient(to right, var(--g1), var(--g2), var(--g1));
   background-size: 200%;
-  height: 19vh;
+  height: 100vh;
   position: relative;
-  border-radius: 0 0 16px 16px;
   animation: background-pan 10s linear infinite;
 }
 
@@ -163,7 +62,6 @@ li {
 
 .tile {
   position: relative;
-  cursor: pointer;
 }
 
 .tile:before {
@@ -181,7 +79,7 @@ li {
 
 /* Start Gradient Grid Text */
 
-.tiles__wrapper.toggled > #title {
+.tiles__wrapper.toggled > #toggle__wrapper {
   opacity: 1;
 }
 
@@ -201,11 +99,15 @@ li {
   pointer-events: none;
   transition: opacity 900ms ease;
   width: 80vw;
-  z-index: 3;
 }
 
-#title {
+#toggle__wrapper {
   opacity: 0;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  align-items: center;
+  transition: all 900ms ease-in-out;
 }
 
 #pre-toggle__banner {
@@ -213,15 +115,51 @@ li {
 }
 
 .centered {
-  left: 50%;
   position: absolute;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
 #title > .fancy {
   color: rgb(255, 255, 59);
   line-height: 0.9em;
+}
+
+#landing-button {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: visible;
+  background-color: transparent;
+  color: white;
+  width: 35vmin;
+  padding: 24px;
+  border: 2px solid var(--g1);
+  border-radius: 8px;
+  transition: visibility 900ms ease-in-out, opacity 900ms ease-in-out,
+    background-color 500ms ease-in-out, border 500ms ease-in-out,
+    color 500ms ease-in-out;
+  font-size: clamp(12px, 3vmin, 24px);
+}
+
+.tiles__wrapper.toggled #landing-button {
+  visibility: visible;
+  opacity: 1;
+}
+
+#landing-button .fa-arrow-right {
+  transition: all 500ms ease-in-out;
+}
+
+#landing-button:hover .fa-arrow-right {
+  transform: rotate(90deg);
+}
+
+#landing-button:hover {
+  background-color: var(--logo-grey);
+  border: 2px solid var(--logo-grey);
+  color: #242424;
+  cursor: pointer;
 }
 
 /* End of Gradient Grid Text */
@@ -233,9 +171,9 @@ li {
   }
 }
 
-@media (max-width: 490px) {
+@media (max-width: 526px) {
   #title,
   #pre-toggle__banner {
-    font-size: 7vmin;
+    font-size: 6.5vmin;
   }
 }
