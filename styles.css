@@ -13,6 +13,7 @@
   --g2: #3450fa;
   --logo-red: #ff4057;
   --logo-grey: #dcdcdc;
+  --fav-black: #242424;
 }
 
 * {
@@ -39,14 +40,10 @@ li {
 
 .column {
   max-width: 1180px;
+  margin: 0 auto;
   height: 100%;
-}
-
-.row {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
 }
 
 /*(End) 1. End of Global Variabeles */
@@ -192,12 +189,19 @@ li {
 /*(Start) 3. Start of Nav bar */
 
 .nav__bar {
+  position: sticky;
+  top: 0;
   height: 50px;
+  background-color: var(--fav-black);
+  border-bottom: 3px solid var(--logo-red);
+  z-index: 5;
 }
 
 .nav__items {
+  width: 100%;
   display: flex;
-  align-items: center;
+  justify-content: flex-start;
+  align-content: center;
   color: whitesmoke;
   font-size: 20px;
 }
@@ -230,8 +234,109 @@ li {
 /*(End) 3.End of Nav Bar  */
 
 /* (Start) 4. About me */
+#landing__about-me {
+  background-color: rgb(204, 204, 204);
+}
+
+.about-me__wrapper {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.about-me__wrapper > h2 {
+  font-size: 48px;
+  color: var(--fav-black);
+}
+
+.about-me__wrapper > hr {
+  background-color: var(--fav-black);
+  width: 15%;
+  margin: 20px auto 40px;
+}
+
+.about-me__icons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.about-me__icon {
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon__wrapper {
+  background-color: var(--logo-red);
+  height: 100px;
+  width: 100px;
+  display: grid;
+  place-items: center;
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+  margin-bottom: 16px;
+}
+
+.fa-solid {
+  font-size: 32px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.about-me__icon > h3 {
+  font-size: 28px;
+  color: rgb(54, 54, 54);
+  margin-bottom: 8px;
+}
+
+.about-me__icon > p {
+  color: rgb(65, 65, 65);
+}
+
+.about-me__left-right {
+  margin-top: 100px;
+  display: flex;
+  width: 100%;
+}
+
+.about-me__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50%;
+}
+
+.about__img-wrapper {
+  height: 400px;
+  width: 300px;
+  object-fit: cover;
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+  margin-bottom: 20px;
+}
+
+.about__img-wrapper img {
+  height: 100%;
+  width: 100%;
+}
+
+.about-me__description {
+  max-width: 500px;
+  line-height: 1.5;
+}
+
+.about-me__right {
+  width: 50%;
+}
 
 /* (End) 4. About me */
+
+#footer {
+  height: 200px;
+  width: 100%;
+  background-color: #d91c50;
+}
 @media (max-width: 874px) {
   #title,
   #pre-toggle__banner {
