@@ -1,3 +1,13 @@
+/* Sections 
+    1. Global Stylings
+    2. Gradient relevant stylings
+      a. The actual gradient grid itself
+      b. The different headers and buttons placed within. 
+    3. The Nav Bar
+    4. The about me section
+*/
+
+/* (Start) 1. Global Variables */
 :root {
   --g1: #d91c50;
   --g2: #3450fa;
@@ -5,13 +15,17 @@
   --logo-grey: #dcdcdc;
 }
 
-body {
-  background-color: #242424;
-  box-sizing: border-box;
-  height: 100vh;
-  overflow: scroll;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background-color: #242424;
+  height: 100vh;
+  overflow: scroll;
 }
 
 a {
@@ -23,9 +37,21 @@ li {
   list-style: none;
 }
 
-/* Start of Nav bar */
+.column {
+  max-width: 1180px;
+  height: 100%;
+}
 
-/* The start of the Gradient grid*/
+.row {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*(End) 1. End of Global Variabeles */
+
+/*(Start) 2a. The start of the Gradient grid*/
 
 .tiles__wrapper {
   overflow: hidden;
@@ -75,9 +101,9 @@ li {
   background-color: rgb(30, 30, 30);
 }
 
-/* End of the Gradient Grid */
+/*(End) 2a. End of the Gradient Grid */
 
-/* Start Gradient Grid Text */
+/*(Start) 2b. Start Gradient Grid Text */
 
 .tiles__wrapper.toggled > #toggle__wrapper {
   opacity: 1;
@@ -91,7 +117,6 @@ li {
 #pre-toggle__banner {
   color: rgb(219, 219, 219);
   text-align: center;
-  font-family: "Rubik", sans-serif;
   font-size: 5vmin;
   padding-bottom: 16px;
   padding-top: 16px;
@@ -130,7 +155,7 @@ li {
   opacity: 0;
   visibility: hidden;
   pointer-events: visible;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.3);
   color: white;
   width: 35vmin;
   padding: 24px;
@@ -162,8 +187,51 @@ li {
   cursor: pointer;
 }
 
-/* End of Gradient Grid Text */
+/*(End) 2b. End of Gradient Grid Text */
 
+/*(Start) 3. Start of Nav bar */
+
+.nav__bar {
+  height: 50px;
+}
+
+.nav__items {
+  display: flex;
+  align-items: center;
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+.nav__item {
+  margin-right: 44px;
+  position: relative;
+}
+
+.nav__item:hover {
+  cursor: pointer;
+}
+
+.nav__item:after {
+  content: "";
+  background-color: var(--logo-red);
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  transition: all 200ms ease-in-out;
+}
+
+.nav__item:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/*(End) 3.End of Nav Bar  */
+
+/* (Start) 4. About me */
+
+/* (End) 4. About me */
 @media (max-width: 874px) {
   #title,
   #pre-toggle__banner {
