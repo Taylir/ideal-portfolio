@@ -20,7 +20,7 @@ const handleOnClick = (index) => {
   anime({
     targets: ".tile",
     opacity: toggled ? 1 : 0,
-    delay: anime.stagger(gridSpeed > 1200 ? 15 : 30, {
+    delay: anime.stagger(gridSpeed > 1200 ? 18 : 36, {
       grid: [columns, rows],
       from: index,
     }),
