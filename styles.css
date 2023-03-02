@@ -497,6 +497,20 @@ li {
   height: 100%;
 }
 
+.card-group[data-index="1"] > .big-card:nth-child(8) {
+  background: url("./assets/internship.png");
+  background-position: center;
+  background-size: cover;
+  transform: translate(10%, 3%) rotate(5deg);
+  text-align: center;
+  color: whitesmoke;
+  overflow: hidden;
+}
+
+.card-group[data-index="2"] > .big-card:nth-child(8) {
+  background-color: rgba(166, 240, 150, 0.3);
+}
+
 .project__links {
   margin-top: 3vmin;
   width: 100%;
