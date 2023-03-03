@@ -292,7 +292,7 @@ li {
   margin-bottom: 16px;
 }
 
-.fa-solid {
+.icon__wrapper > .fa-solid {
   font-size: 32px;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
 }
@@ -395,9 +395,21 @@ li {
 #projects {
   margin: 0;
   height: 100vmin;
+  min-height: 500px;
   display: grid;
   place-items: center;
   position: relative;
+}
+
+#projects > div > h2 {
+  text-align: center;
+  font-size: 8vmin;
+  color: whitesmoke;
+}
+
+#projects > div > hr {
+  width: 80%;
+  margin: 20px auto 0;
 }
 
 .card-groups,
@@ -437,53 +449,57 @@ li {
 
 .big-card:nth-child(2) {
   background: url("./assets/activecart.png");
-  background-position: center;
-  background-size: cover;
   transform: translateX(-10%) rotate(-1deg);
 }
 
 .card-group[data-index="1"] > .big-card:nth-child(2) {
-  background-color: rgba(200, 240, 80, 0.03);
+  background: url("./assets/internship-person.png");
 }
 
 .card-group[data-index="2"] > .big-card:nth-child(2) {
-  background-color: rgba(120, 160, 160, 0.03);
+  background: url("./assets/Treko\ furthest\ down.png");
+}
+
+.card-group[data-index="3"] > .big-card:nth-child(2) {
+  background: url("./assets/Hulue-other.png");
 }
 
 .big-card:nth-child(4) {
   background: url("./assets/bookcol.png");
-  background-position: center;
-  background-size: cover;
   transform: rotate(2deg);
 }
 
 .card-group[data-index="1"] > .big-card:nth-child(4) {
-  background-color: rgba(132, 86, 70, 0.3);
+  background: url("./assets/Internship-explore.png");
 }
 
 .card-group[data-index="2"] > .big-card:nth-child(4) {
-  background-color: rgba(212, 186, 150, 0.3);
+  background: url("./assets/Treko\ more\ down.png");
+}
+
+.card-group[data-index="3"] > .big-card:nth-child(4) {
+  background: url("./assets/Hulu-animation.png");
 }
 
 .big-card:nth-child(6) {
   background: url("./assets/Cart.png");
-  background-position: center;
-  background-size: cover;
   transform: translateX(-6%) rotate(-3deg);
 }
 
 .card-group[data-index="1"] > .big-card:nth-child(6) {
-  background-color: rgba(86, 160, 70, 0.3);
+  background: url("./assets/Internship.png");
 }
 
 .card-group[data-index="2"] > .big-card:nth-child(6) {
-  background-color: rgba(166, 240, 150, 0.3);
+  background: url("./assets/Treko\ down.png");
+}
+
+.card-group[data-index="3"] > .big-card:nth-child(6) {
+  background: url("./assets/Horror.png");
 }
 
 .big-card:nth-child(8) {
   background: url("./assets/Librarydark.png");
-  background-position: center;
-  background-size: cover;
   transform: translate(10%, 3%) rotate(5deg);
   text-align: center;
   color: whitesmoke;
@@ -492,23 +508,57 @@ li {
 
 .big-card:nth-child(8) > h3 {
   padding: 16px 4px 4px;
-  font-size: 2vmin;
+  font-size: 1.75vmin;
   background-color: rgba(0, 0, 0, 0.4);
   height: 100%;
 }
 
 .card-group[data-index="1"] > .big-card:nth-child(8) {
   background: url("./assets/internship.png");
-  background-position: center;
-  background-size: cover;
   transform: translate(10%, 3%) rotate(5deg);
   text-align: center;
   color: whitesmoke;
   overflow: hidden;
 }
 
+.card-group[data-index="1"] > .big-card:nth-child(8) > h3 {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 .card-group[data-index="2"] > .big-card:nth-child(8) {
-  background-color: rgba(166, 240, 150, 0.3);
+  background: url("./assets/Treko\ land.png");
+}
+
+.card-group[data-index="3"] > .big-card:nth-child(8) {
+  background: url("./assets/Hulu-clone.png");
+}
+
+.card-group[data-index="2"] > .big-card:nth-child(8) > h3 {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.card-group[data-index="3"] > .big-card:nth-child(8) > h3 {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.big-card:nth-child(2),
+.big-card:nth-child(4),
+.big-card:nth-child(6),
+.big-card:nth-child(8),
+.card-group[data-index="1"] > .big-card.big-card:nth-child(2),
+.card-group[data-index="1"] > .big-card.big-card:nth-child(4),
+.card-group[data-index="1"] > .big-card.big-card:nth-child(6),
+.card-group[data-index="1"] > .big-card.big-card:nth-child(8),
+.card-group[data-index="2"] > .big-card.big-card:nth-child(2),
+.card-group[data-index="2"] > .big-card.big-card:nth-child(4),
+.card-group[data-index="2"] > .big-card.big-card:nth-child(6),
+.card-group[data-index="2"] > .big-card.big-card:nth-child(8),
+.card-group[data-index="3"] > .big-card.big-card:nth-child(2),
+.card-group[data-index="3"] > .big-card.big-card:nth-child(4),
+.card-group[data-index="3"] > .big-card.big-card:nth-child(6),
+.card-group[data-index="3"] > .big-card.big-card:nth-child(8) {
+  background-position: center;
+  background-size: cover;
 }
 
 .project__links {
@@ -521,7 +571,7 @@ li {
 .project__links > a {
   color: whitesmoke;
   border-radius: 8px;
-  font-size: 5vmin;
+  font-size: 4vmin;
 }
 
 .card-group[data-index="1"] > .big-card:nth-child(8) {
@@ -537,11 +587,15 @@ li {
 }
 
 .card-group[data-index="1"] > .little-card:nth-child(1) {
-  background: url("./assets/Css.webp");
+  background: url("./assets/React.png");
 }
 
 .card-group[data-index="2"] > .little-card:nth-child(1) {
-  background: url("./assets/Html.png");
+  background: url("./assets/React.png");
+}
+
+.card-group[data-index="3"] > .little-card:nth-child(1) {
+  background: url("./assets/next.png");
 }
 
 .little-card:nth-child(3) {
@@ -549,11 +603,15 @@ li {
 }
 
 .card-group[data-index="1"] > .little-card:nth-child(3) {
-  background: url("./assets/Firebase.webp");
+  background: url("./assets/Node.png");
 }
 
 .card-group[data-index="2"] > .little-card:nth-child(3) {
-  background: url("./assets/Typescript.webp");
+  background: url("./assets/trpc.svg");
+}
+
+.card-group[data-index="3"] > .little-card:nth-child(3) {
+  background: url("./assets/Tailwind_CSS_Logo.svg.png");
 }
 
 .little-card:nth-child(5) {
@@ -561,11 +619,15 @@ li {
 }
 
 .card-group[data-index="1"] > .little-card:nth-child(5) {
-  background: url("./assets/Css.webp");
+  background: url("./assets/Git.png");
 }
 
 .card-group[data-index="2"] > .little-card:nth-child(5) {
-  background: url("./assets/Html.png");
+  background: url("./assets/Mailchimp.png");
+}
+
+.card-group[data-index="3"] > .little-card:nth-child(5) {
+  background: url("./assets/Typescript.webp");
 }
 
 .little-card:nth-child(7) {
@@ -573,11 +635,15 @@ li {
 }
 
 .card-group[data-index="1"] > .little-card:nth-child(7) {
-  background: url("./assets/Css.webp");
+  background: url("./assets/bootstrap.png");
 }
 
 .card-group[data-index="2"] > .little-card:nth-child(7) {
-  background: url("./assets/Html.png");
+  background: url("./assets/gfonts.png");
+}
+
+.card-group[data-index="3"] > .little-card:nth-child(7) {
+  background: url("./assets/React.png");
 }
 
 .little-card:nth-child(1),
@@ -591,14 +657,18 @@ li {
 .card-group[data-index="2"] > .little-card:nth-child(1),
 .card-group[data-index="2"] > .little-card:nth-child(3),
 .card-group[data-index="2"] > .little-card:nth-child(5),
-.card-group[data-index="2"] > .little-card:nth-child(7) {
+.card-group[data-index="2"] > .little-card:nth-child(7),
+.card-group[data-index="3"] > .little-card:nth-child(1),
+.card-group[data-index="3"] > .little-card:nth-child(3),
+.card-group[data-index="3"] > .little-card:nth-child(5),
+.card-group[data-index="3"] > .little-card:nth-child(7) {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .card-group:hover > .big-card:nth-child(2) {
-  transform: translate(-90%, 22%) rotate(-24deg);
+  transform: translate(-80%, 18%) rotate(-24deg);
 }
 
 .card-group:hover > .big-card:nth-child(4) {
@@ -610,7 +680,7 @@ li {
 }
 
 .card-group:hover > .big-card:nth-child(8) {
-  transform: translate(90%, 22%) rotate(24deg);
+  transform: translate(80%, 18%) rotate(24deg);
 }
 
 .card-group:hover > .little-card:nth-child(1) {
