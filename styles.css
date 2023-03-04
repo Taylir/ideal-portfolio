@@ -28,7 +28,7 @@
 body {
   background-color: #242424;
   height: 100vh;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 a {
@@ -79,7 +79,7 @@ li {
 
 @keyframes background-pan {
   from {
-    background-position: 0% center;
+    background-position: 0 center;
   }
 
   to {
@@ -242,7 +242,10 @@ li {
 
 .nav__item:after {
   content: "";
+  position: absolute;
   background-color: var(--logo-red);
+  height: 3px;
+  bottom: 0;
   right: 0;
   width: 0;
   transition: all 200ms ease-in-out;
@@ -773,6 +776,8 @@ li {
   );
   display: grid;
   place-items: center;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
 }
 
 .goals__header-title > h3 {
@@ -784,6 +789,7 @@ li {
 .goals__header-title > hr {
   margin: 0 auto;
   width: 80%;
+  color: #242424;
 }
 
 .goals-section__wrapper {
@@ -835,12 +841,21 @@ li {
   margin-top: 8px;
 }
 
+.blog__section {
+  margin-top: 40px;
+  text-align: center;
+  color: white;
+}
+
+.blog__section > h3 {
+  font-size: 32px;
+}
+
 .blog__wrapper {
   margin-top: 42px;
   width: 100%;
   display: grid;
   place-items: center;
-  border: 1px solid yellow;
 }
 
 .blog__wrapper {
@@ -884,11 +899,72 @@ li {
 
 /* (End) 6. Goal/Blogs */
 
+/* (Start)  7. Contact Area*/
+
+#contact {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--logo-grey);
+}
+
+.background-triangle {
+  position: relative;
+  height: 0;
+  width: 0;
+  border-left: 49.6vw solid transparent;
+  border-right: 49.6vw solid transparent;
+  border-top: 250px solid var(--fav-black);
+}
+
+.contact__form {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 75vmin;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid yellow;
+}
+
+.input__item {
+  position: relative;
+}
+
+.input__item > input {
+  background-color: yellow;
+  outline: none;
+  border: none;
+  margin-bottom: 20px;
+  border: 1px solid red;
+}
+
+.input__item > label {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  color: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  padding-left: 2px;
+  padding-right: 2px;
+  background-color: transparent;
+  transition: all 200ms ease-in-out;
+}
+
+.input__item > input:focus + label {
+  transform: translate(-75%, -100%);
+}
+/* (End ) 7. Contact area*/
+
 #footer {
-  height: 200px;
+  visibility: visible;
+  height: 100%;
   width: 100%;
   background-color: #d91c50;
 }
+
 @media (max-width: 874px) {
   #title,
   #pre-toggle__banner {
