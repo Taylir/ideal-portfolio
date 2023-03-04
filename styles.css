@@ -60,6 +60,10 @@ li {
   font-weight: bold;
 }
 
+.clickable {
+  cursor: pointer;
+}
+
 /*(End) 1. End of Global Variabeles */
 
 /*(Start) 2a. The start of the Gradient grid*/
@@ -239,9 +243,6 @@ li {
 .nav__item:after {
   content: "";
   background-color: var(--logo-red);
-  height: 3px;
-  position: absolute;
-  bottom: 0;
   right: 0;
   width: 0;
   transition: all 200ms ease-in-out;
@@ -762,10 +763,27 @@ li {
 /* (Start) 6. Goal/Blogs */
 
 #goals__blog {
-  height: 400px;
-  background-color: var(--logo-grey);
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--logo-grey) 0%,
+    var(--logo-grey) 50%,
+    var(--fav-black) 50%,
+    var(--fav-black) 100%
+  );
   display: grid;
   place-items: center;
+}
+
+.goals__header-title > h3 {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-size: 48px;
+}
+
+.goals__header-title > hr {
+  margin: 0 auto;
+  width: 80%;
 }
 
 .goals-section__wrapper {
@@ -804,7 +822,7 @@ li {
 .goal__title > .fa-desktop,
 .goal__title > .fa-person-rays,
 .goal__title > .fa-terminal {
-  background-color: red;
+  background-color: rgb(51, 160, 133);
   padding: 20px;
   border-radius: 100%;
   font-size: 32px;
@@ -815,6 +833,53 @@ li {
 .goal__langs > p,
 .goal__tools > p {
   margin-top: 8px;
+}
+
+.blog__wrapper {
+  margin-top: 42px;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  border: 1px solid yellow;
+}
+
+.blog__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.blog-item {
+  padding: 8px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  margin: 4px;
+}
+
+.blog-item:hover .blog-img__wrapper > img {
+  transform: scale(1.1);
+}
+
+.blog-item:active .blog-img__wrapper > img {
+  transform: scale(0.9);
+  filter: blur(1px);
+}
+
+.blog-img__wrapper {
+  height: 300px;
+  width: 400px;
+  overflow: hidden;
+}
+
+.blog-img__wrapper > img {
+  border-radius: 4px;
+  height: 300px;
+  width: 400px;
+  transition: all 200ms ease-in-out;
+}
+
+.blog__info {
+  color: white;
+  text-align: center;
 }
 
 /* (End) 6. Goal/Blogs */
