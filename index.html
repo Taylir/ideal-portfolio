@@ -36,7 +36,7 @@
             <li class="nav__item">Home</li>
             <li class="nav__item">About Me</li>
             <li class="nav__item">Projects</li>
-            <li class="nav__item">Goals/Blog</li>
+            <li class="nav__item">Work/Blog</li>
             <li class="nav__item">Contact</li>
           </ul>
         </div>
@@ -44,8 +44,10 @@
       <section id="landing__about-me">
         <div class="column">
           <div class="about-me__wrapper">
-            <h2>About me</h2>
-            <hr />
+            <div class="about-start">
+              <h2>About me</h2>
+              <hr />
+            </div>
             <div class="about-me__top-banner">
               <div class="about-me__icons">
                 <div class="about-me__icon">
@@ -373,7 +375,7 @@
           <div class="blog__section">
             <h3>
               Check out some of my blogs below on the medium platform and follow
-              along!
+              along! (In constuction)
             </h3>
             <div class="blog__wrapper">
               <div class="blog-item clickable">
@@ -417,24 +419,42 @@
         </div>
       </section>
       <section id="contact">
-        <div class="background-triangle"></div>
+        <div class="background-triangle">
+          <div class="internal-traiangle"></div>
+        </div>
         <div class="column">
-          <form class="contact__form">
-            <div class="input__item">
-              <input type="text" >
-              <label>Name</label>
-            </div>
-            <label>Email</label>
-            <input type="email" placeholder="Email" >
-            <label>Message</label>
-            <textarea
-              type="text"
-              placeholder="Message or picture of your cat idc..."
-            >
-          </form>
+          <div class="contact-form__wrapper">
+            <h3>Reach out to me here!</h3>
+            <hr />
+            <form class="contact__form" action="">
+              <div class="name__input">
+                <input
+                  oninput="checkValue(event, 'input-value-name')"
+                  type="text"
+                />
+                <label class="input-value-name" for="name">Name</label>
+              </div>
+              <div class="email__input">
+                <input
+                  oninput="checkValue(event, 'input-value-email')"
+                  type="email"
+                />
+                <label class="input-value-email" for="e_mail">Email</label>
+              </div>
+              <div class="textarea-input">
+                <textarea
+                  oninput="checkValue(event, 'input-value-textarea')"
+                  cols="30"
+                  rows="7"
+                ></textarea>
+                <label class="input-value-textarea">Message</label>
+              </div>
+              <button>Send it my way!</button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
-    <footer id="footer">I like pie</footer>
+    <footer id="footer"></footer>
   </body>
 </html>

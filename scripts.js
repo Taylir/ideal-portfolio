@@ -110,3 +110,17 @@ function handleLeft() {
     activeIndex = nextIndex;
   }, 100);
 }
+
+// above code for card carousel
+
+//Below code for checking if input has value
+
+function checkValue(eve, selClass) {
+  const labels = document.querySelector(`.${selClass}`);
+  if (eve.target.value) {
+    labels.classList.add("value-true");
+  } else if (!eve.target.value) {
+    labels.classList.remove("value-true");
+  }
+  console.log(labels);
+}
