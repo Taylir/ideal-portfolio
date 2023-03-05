@@ -33,11 +33,45 @@
       <nav class="nav__bar">
         <div class="column">
           <ul class="nav__items">
-            <li class="nav__item">Home</li>
-            <li class="nav__item">About Me</li>
-            <li class="nav__item">Projects</li>
-            <li class="nav__item">Work/Blog</li>
-            <li class="nav__item">Contact</li>
+            <a href="#tiles">
+              <li class="nav__item">Home</li>
+            </a>
+            <a href="#landing__about-me">
+              <li class="nav__item">About Me</li>
+            </a>
+            <a href="#projects">
+              <li class="nav__item">Projects</li>
+            </a>
+            <a href="#goals__blog">
+              <li class="nav__item">Work/Blog</li>
+            </a>
+            <a href="#contact">
+              <li class="nav__item">Contact</li>
+            </a>
+          </ul>
+        </div>
+        <div class="small__nav">
+          <div onclick="toggleMenu()" class="small__nav-lines">
+            <div class="top-line"></div>
+            <div class="middle-line"></div>
+            <div class="bottom-line"></div>
+          </div>
+          <ul class="small__nav-items">
+            <a href="#tiles"">
+              <li class="small__nav-item">Home</li>
+            </a>
+            <a href="#landing__about-me">
+              <li class="small__nav-item">About Me</li>
+            </a>
+            <a href="#projects">
+              <li class="small__nav-item">Projects</li>
+            </a>
+            <a href="#goals__blog">
+              <li class="small__nav-item">Work/Blog</li>
+            </a>
+            <a href="#contact">
+              <li class="small__nav-item">Contact</li>
+            </a>
           </ul>
         </div>
       </nav>
@@ -455,6 +489,33 @@
         </div>
       </section>
     </main>
-    <footer id="footer"></footer>
+    <footer id="footer">
+      <figure>
+        <a href="#">
+          <img class="footer__logo" src="./assets/nav-logo-p.png" alt="" />
+        </a>
+      </figure>
+      <p>
+        Learning and growing every day!
+        <br />
+        Building better and greater things!
+      </p>
+      <div class="footer__social-links">
+        <a href="">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="">
+          <i class="fa-solid fa-file-pdf"></i>
+        </a>
+      </div>
+      <p>
+        Created, desinged, and coded all by me!
+        <br />
+        &copy;2023
+      </p>
+    </footer>
   </body>
 </html>

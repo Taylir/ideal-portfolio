@@ -124,3 +124,25 @@ function checkValue(eve, selClass) {
   }
   console.log(labels);
 }
+
+//Above code for checking if input has a value and edidting css
+
+//Below code is for small nav menu
+
+let isClicked = false;
+
+function toggleMenu() {
+  isClicked = !isClicked;
+  const smallToggle = document.querySelector(".small__nav-lines");
+  const smallMenuItems = document.querySelector(".small__nav-items");
+  if (isClicked) {
+    smallToggle.classList.add("active");
+    smallMenuItems.classList.add("active");
+  } else {
+    smallToggle.classList.remove("active");
+    smallMenuItems.classList.remove("active");
+  }
+  console.log(smallToggle, smallMenuItems);
+}
+
+//Above is the code for the small nav
