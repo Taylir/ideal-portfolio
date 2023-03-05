@@ -33,6 +33,7 @@ body {
   background-color: #242424;
   height: 100vh;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 a {
@@ -1300,7 +1301,7 @@ li {
   }
 
   .contact__form {
-    width: 175%;
+    width: 135%;
     grid-template-rows: repeat(5, 1fr);
   }
 
@@ -1413,7 +1414,7 @@ li {
   }
 
   .contact__form {
-    width: 200%;
+    width: 180%;
   }
 
   #footer {
