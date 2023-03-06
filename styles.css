@@ -34,6 +34,13 @@ body {
   height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
+  -ms-overflow-style: none; /* Ie and edge*/
+  scrollbar-width: none; /* Firefox*/
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+body::-webkit-scrollbar {
+  display: none;
 }
 
 a {
