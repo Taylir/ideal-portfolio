@@ -77,6 +77,13 @@ li {
   cursor: pointer;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 40px #525252 inset !important;
+}
+
 /*(End) 1. End of Global Variabeles */
 
 /*(Start) 2a. The start of the Gradient grid*/
