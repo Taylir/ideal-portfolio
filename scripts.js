@@ -1,7 +1,7 @@
 //Below Code is for the gradient grid
 
 // import anime from "animejs";
-import anime from "/node_modules/animejs/lib/anime.es.js";
+// import anime from "/node_modules/animejs/lib/anime.js";
 
 const wrapper = document.getElementById("tiles");
 const bodyWrapper = document.querySelector(".tiles__wrapper");
