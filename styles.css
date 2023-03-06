@@ -498,6 +498,12 @@ li {
   background-color: rgb(161, 161, 161);
 }
 
+.contact-me__landing {
+  color: var(--logo-red);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 /* (End) 4. About me */
 
 /* (Start) 5. Projects */
