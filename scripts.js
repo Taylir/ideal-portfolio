@@ -145,9 +145,11 @@ function toggleMenu() {
 //Above is the code for the small nav
 
 //Below is the code for the email form
-
 function contact(event) {
   event.preventDefault();
+  const loading = document.querySelector(".contact__loading");
+  const success = document.querySelector(".contact__success");
+  loading.classList.add("active-loading");
 
   // setTimeout(() => {
   //   console.log("it worked");
@@ -159,12 +161,12 @@ function contact(event) {
   emailjs
     .sendForm(`service_ju9czme`, `template_p5md8rc`, event.target)
     .then((response) => {
-      alert(
-        "The message was sent! You are just sending it before I set up animation for it! I appreciate the message and hope you have a good day! If you would like to contact me directly do so at taylir@taylorfel.com"
-      );
+      loading.classList.remove("active-loading");
+      success.classList.add("success_send");
     })
     .catch((error) => {
       console.log("did not work", error);
+      loading.classList.remove("active-loading");
       alert(
         `The Email service is temporarily unavailable. Please contact me directly on taylir@taylorfel.com`
       );
