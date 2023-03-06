@@ -1,5 +1,4 @@
 //Below Code is for the gradient grid
-
 const wrapper = document.getElementById("tiles");
 const bodyWrapper = document.querySelector(".tiles__wrapper");
 
@@ -61,12 +60,11 @@ const createGrid = () => {
   createTiles(columns * rows);
 };
 
-window.onload = createGrid();
+createGrid();
 window.onresize = () => {
   createGrid();
   goodGridSpeed();
 };
-
 //Above code is for the Gradient Grid
 
 //Below Code is for the card actions
