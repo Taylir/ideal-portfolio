@@ -1,6 +1,6 @@
 //Below Code is for the gradient grid
 
-// const anime = require("animejs");
+const anime = require("animejs");
 
 const wrapper = document.getElementById("tiles");
 const bodyWrapper = document.querySelector(".tiles__wrapper");
