@@ -61,7 +61,7 @@ const createGrid = () => {
   createTiles(columns * rows);
 };
 
-createGrid();
+window.onload = createGrid();
 window.onresize = () => {
   createGrid();
   goodGridSpeed();
