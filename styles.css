@@ -1050,7 +1050,7 @@ li {
   border: 1px solid var(--logo-red);
   box-shadow: 2px 2px 4px 2px rgba(36, 36, 36, 0.5);
   padding: 80px;
-  width: 80%;
+  width: clamp(70vmin, 800px, 90vmin);
   background-color: var(--fav-black);
   display: flex;
   flex-direction: column;
@@ -1274,7 +1274,7 @@ li {
 
   @media (max-width: 800px) {
     .contact-form__wrapper {
-      width: 100%;
+      width: 90%;
     }
 
     .contact__form {
