@@ -122,7 +122,6 @@ function checkValue(eve, selClass) {
   } else if (!eve.target.value) {
     labels.classList.remove("value-true");
   }
-  console.log(labels);
 }
 
 //Above code for checking if input has a value and edidting css
@@ -142,7 +141,33 @@ function toggleMenu() {
     smallToggle.classList.remove("active");
     smallMenuItems.classList.remove("active");
   }
-  console.log(smallToggle, smallMenuItems);
 }
 
 //Above is the code for the small nav
+
+//Below is the code for the email form
+
+function contact(event) {
+  event.preventDefault();
+
+  // setTimeout(() => {
+  //   console.log("it worked");
+  //   alert(
+  //     `The Email service is temporarily unavailable. Please contact me directly on tdl9716@gmail.com`
+  //   );
+  // }, 500);
+
+  emailjs
+    .sendForm(`service_ju9czme`, `template_p5md8rc`, event.target)
+    .then((response) => {
+      alert(
+        "The message was sent! You are just sending it before I set up animation for it! I appreciate the message and hope you have a good day! If you would like to contact me directly do so at taylir@taylorfel.com"
+      );
+    })
+    .catch((error) => {
+      console.log("did not work", error);
+      alert(
+        `The Email service is temporarily unavailable. Please contact me directly on taylir@taylorfel.com`
+      );
+    });
+}

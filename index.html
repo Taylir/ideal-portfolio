@@ -12,6 +12,14 @@
       src="https://kit.fontawesome.com/3f1e616f56.js"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("01135LlMefKItv48l");
+   })();
+</script>
   </head>
   <body>
     <div class="tiles__wrapper">
@@ -214,10 +222,10 @@
                   bookstore that includes dynamic API pulls and an updating
                   cart, as well as allowing support for any number of books.
                   <div class="project__links">
-                    <a href="">
+                    <a href="https://github.com/Taylir/e-commerce" target="_blank">
                       <i class="fa-brands fa-github"></i>
                     </a>
-                    <a href="">
+                    <a href="https://e-commerce-9lv509hol-taylir.vercel.app/" target="_blank">
                       <i class="fa-solid fa-link"></i>
                     </a>
                   </div>
@@ -239,10 +247,10 @@
                   website. My responsibilities included implementing back-end
                   API calls and ensuring efficient rendering of content.
                   <div class="project__links">
-                    <a href="">
+                    <a href="https://github.com/Taylir/taylor-internship" target="_blank">
                       <i class="fa-brands fa-github"></i>
                     </a>
-                    <a href="">
+                    <a href="https://taylor-internship-19w96etcl-taylir.vercel.app/" target="_blank">
                       <i class="fa-solid fa-link"></i>
                     </a>
                   </div>
@@ -264,10 +272,10 @@
                   my 2 active projects atm to make this even better and more
                   responsive.
                   <div class="project__links">
-                    <a href="">
+                    <a href="https://github.com/Taylir/treko" target="_blank">
                       <i class="fa-brands fa-github"></i>
                     </a>
-                    <a href="">
+                    <a href="https://treko.vercel.app/" target="_blank">
                       <i class="fa-solid fa-link"></i>
                     </a>
                   </div>
@@ -289,10 +297,10 @@
                   prototype is ready to check out but will have a more full
                   version in the future.
                   <div class="project__links">
-                    <a href="">
+                    <a href="https://github.com/Taylir/Hulu-updated-recreated" target="_blank">
                       <i class="fa-brands fa-github"></i>
                     </a>
-                    <a href="">
+                    <a href="https://hulu-updated-recreated.vercel.app/" target="_blank">
                       <i class="fa-solid fa-link"></i>
                     </a>
                   </div>
@@ -461,11 +469,12 @@
           <div class="contact-form__wrapper">
             <h3>Reach out to me here!</h3>
             <hr />
-            <form class="contact__form" action="">
+            <form onsubmit="contact(event)" class="contact__form">
               <div class="name__input">
                 <input
                   oninput="checkValue(event, 'input-value-name')"
                   type="text"
+                  name="user_name"
                 />
                 <label class="input-value-name" for="name">Name</label>
               </div>
@@ -473,6 +482,7 @@
                 <input
                   oninput="checkValue(event, 'input-value-email')"
                   type="email"
+                  name="user_email"
                 />
                 <label class="input-value-email" for="e_mail">Email</label>
               </div>
@@ -481,6 +491,7 @@
                   oninput="checkValue(event, 'input-value-textarea')"
                   cols="30"
                   rows="7"
+                  name="message"
                 ></textarea>
                 <label class="input-value-textarea">Message</label>
               </div>
