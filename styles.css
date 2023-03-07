@@ -336,7 +336,7 @@ input:-webkit-autofill:active {
     rgba(225, 225, 225, 0.85)
   );
   opacity: 0;
-  height: 0;
+  height: 100%;
   top: 100%;
   right: -12%;
   display: grid;
@@ -354,6 +354,12 @@ input:-webkit-autofill:active {
 .small__nav-items > a:not(:last-child) {
   width: 100%;
   border-bottom: 2px solid var(--logo-red);
+}
+
+.small__nav-items > a {
+  height: 100%;
+  display: grid;
+  place-items: center;
 }
 
 .small__nav-item {
