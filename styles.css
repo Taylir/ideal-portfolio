@@ -485,13 +485,14 @@ input:-webkit-autofill:active {
 
 .graph-bar {
   width: 100%;
-  background-color: grey;
   height: 28px;
   border-radius: 8px;
   margin-top: 16px;
   display: flex;
+  background-color: rgb(161, 161, 161);
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .graph-bar > p {
@@ -505,7 +506,30 @@ input:-webkit-autofill:active {
   font-size: 14px;
 }
 
-.graph-bar > div {
+.bar-growth {
+  background-color: grey;
+  border-radius: 0 8px 8px 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100px;
+  right: 0;
+}
+
+.bar-growth.in-view {
+  animation: grow-right 2s linear;
+}
+
+@keyframes grow-right {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 0;
+  }
+}
+
+.skill-precentage {
   padding-right: 2px;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.6);
@@ -516,6 +540,7 @@ input:-webkit-autofill:active {
   height: 100%;
   border-radius: 0 8px 8px 0;
   background-color: rgb(161, 161, 161);
+  z-index: 1;
 }
 
 .contact-me__landing {

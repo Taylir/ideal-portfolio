@@ -201,3 +201,29 @@ AOS.init({
   mirror: false, // whether elements should animate out while scrolling past them
   anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
 });
+
+//Above is the init for thje AOS
+
+function onScrollBars() {
+  const bars = document.querySelectorAll(".bar-growth");
+  let scroll = window.scrollY;
+  let width = window.innerWidth;
+  console.log(scroll);
+
+  if (scroll > 1850 && width < 500) {
+    bars.forEach((bar) => bar.classList.add("in-view"));
+  } else if (scroll > 1550 && width >= 500 && width < 750) {
+    bars.forEach((bar) => bar.classList.add("in-view"));
+  } else if (scroll > 1650 && width >= 750 && width <= 800) {
+    bars.forEach((bar) => bar.classList.add("in-view"));
+  } else if (scroll > 1000 && width > 800 && width < 1000) {
+    bars.forEach((bar) => bar.classList.add("in-view"));
+  } else if (scroll > 800 && width >= 1000) {
+    bars.forEach((bar) => bar.classList.add("in-view"));
+  }
+}
+
+onScrollBars();
+window.onscroll = () => {
+  onScrollBars();
+};
