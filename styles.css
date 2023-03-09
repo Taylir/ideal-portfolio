@@ -483,66 +483,6 @@ input:-webkit-autofill:active {
   padding-right: 8px;
 }
 
-.graph-bar {
-  width: 100%;
-  height: 28px;
-  border-radius: 8px;
-  margin-top: 16px;
-  display: flex;
-  background-color: rgb(161, 161, 161);
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-}
-
-.graph-bar > p {
-  background-color: var(--logo-red);
-  color: var(--fav-black);
-  height: 100%;
-  width: 100px;
-  border-radius: 8px 0 0 8px;
-  display: grid;
-  place-items: center;
-  font-size: 14px;
-}
-
-.bar-growth {
-  background-color: grey;
-  border-radius: 0 8px 8px 0;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 100px;
-  right: 0;
-}
-
-.bar-growth.in-view {
-  animation: grow-right 2s linear;
-}
-
-@keyframes grow-right {
-  from {
-    right: 100%;
-  }
-  to {
-    right: 0;
-  }
-}
-
-.skill-precentage {
-  padding-right: 2px;
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 8px;
-  height: 100%;
-  border-radius: 0 8px 8px 0;
-  background-color: rgb(161, 161, 161);
-  z-index: 1;
-}
-
 .contact-me__landing {
   color: var(--logo-red);
   text-decoration: underline;
@@ -1000,9 +940,8 @@ input:-webkit-autofill:active {
 }
 
 .blog__section {
-  margin-top: 40px;
   text-align: center;
-  color: white;
+  color: var(--fav-black);
 }
 
 .blog__section > h3 {
@@ -1014,7 +953,7 @@ input:-webkit-autofill:active {
   width: 100%;
   display: grid;
   gap: 8px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   padding: 16px;
 }
 
@@ -1024,9 +963,14 @@ input:-webkit-autofill:active {
   padding: 8px;
   border: 1px solid grey;
   border-radius: 4px;
+  background-color: rgba(36, 36, 36, 0.06);
+}
+
+.blog-item > a {
+  height: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .blog-item:hover .blog-img__wrapper > img {
@@ -1041,6 +985,7 @@ input:-webkit-autofill:active {
 .blog-img__wrapper {
   height: 80%;
   width: 100%;
+  border-radius: 4px;
   overflow: hidden;
 }
 
@@ -1053,7 +998,7 @@ input:-webkit-autofill:active {
 }
 
 .blog__info {
-  color: white;
+  color: var(--fav-black);
   text-align: center;
 }
 

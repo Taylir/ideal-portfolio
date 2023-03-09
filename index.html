@@ -1,561 +1,637 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taylor-folio</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="icon" type="image/png" href="logo-black.png" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="./animejs/lib/anime.min.js"></script>
+    <script src="./animejs/lib/anime.es.js"></script>
+    <script src="./animejs/lib/anime.js"></script>
+    <script src="scripts.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/3f1e616f56.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("01135LlMefKItv48l");
+      })();
+    </script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Taylor-folio</title>
-  <link rel="stylesheet" type="text/css" href="styles.css" />
-  <link rel="icon" type="image/png" href="logo-black.png">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <script src="./animejs/lib/anime.min.js"></script>
-  <script src="./animejs/lib/anime.es.js"></script>
-  <script src="./animejs/lib/anime.js"></script>
-  <script src="scripts.js" defer></script>
-  <script src="https://kit.fontawesome.com/3f1e616f56.js" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-  </script>
-  <script type="text/javascript">
-    (function () {
-      emailjs.init("01135LlMefKItv48l");
-    })();
-  </script>
-</head>
-
-<body>
-  <div class="tiles__wrapper">
-    <div id="tiles"></div>
-    <div id="toggle__wrapper" class="centered">
-      <h1 id="title">
-        Hi! My name is Taylor, a
-        <span class="fancy">Frontend Software Developer!</span>
+  <body>
+    <div class="tiles__wrapper">
+      <div id="tiles"></div>
+      <div id="toggle__wrapper" class="centered">
+        <h1 id="title">
+          Hi! My name is Taylor, a
+          <span class="fancy">Frontend Software Developer!</span>
+        </h1>
+        <button id="landing-button">
+          <a href="#landing__about-me">
+            Check me out! &nbsp; <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </button>
+      </div>
+      <h1 id="pre-toggle__banner" class="centered">
+        Click Me! Anywhere you'd like!
       </h1>
-      <button id="landing-button">
-        <a href="#landing__about-me">
-          Check me out! &nbsp; <i class="fa-solid fa-arrow-right"></i>
-        </a>
-      </button>
     </div>
-    <h1 id="pre-toggle__banner" class="centered">
-      Click Me! Anywhere you'd like!
-    </h1>
-  </div>
-  <main>
-    <nav class="nav__bar">
-      <div class="column">
-        <ul class="nav__items">
-          <a href="#tiles">
-            <li class="nav__item">Home</li>
-          </a>
-          <a href="#landing__about-me">
-            <li class="nav__item">About Me</li>
-          </a>
-          <a href="#projects">
-            <li class="nav__item">Projects</li>
-          </a>
-          <a href="#goals__blog">
-            <li class="nav__item">Work/Blog</li>
-          </a>
-          <a href="#contact">
-            <li class="nav__item">Contact</li>
-          </a>
-        </ul>
-      </div>
-      <div class="small__nav">
-        <div onclick="toggleMenu()" class="small__nav-lines">
-          <div class="top-line"></div>
-          <div class="middle-line"></div>
-          <div class="bottom-line"></div>
+    <main>
+      <nav class="nav__bar">
+        <div class="column">
+          <ul class="nav__items">
+            <a href="#tiles">
+              <li class="nav__item">Home</li>
+            </a>
+            <a href="#landing__about-me">
+              <li class="nav__item">About/Blog</li>
+            </a>
+            <a href="#projects">
+              <li class="nav__item">Projects</li>
+            </a>
+            <a href="#goals__blog">
+              <li class="nav__item">Work About</li>
+            </a>
+            <a href="#contact">
+              <li class="nav__item">Contact</li>
+            </a>
+          </ul>
         </div>
-        <ul class="small__nav-items">
-          <a href="#tiles"">
-              <li class=" small__nav-item">Home</li>
-          </a>
-          <a href="#landing__about-me">
-            <li class="small__nav-item">About Me</li>
-          </a>
-          <a href="#projects">
-            <li class="small__nav-item">Projects</li>
-          </a>
-          <a href="#goals__blog">
-            <li class="small__nav-item">Work/Blog</li>
-          </a>
-          <a href="#contact">
-            <li class="small__nav-item">Contact</li>
-          </a>
-        </ul>
-      </div>
-    </nav>
-    <section id="landing__about-me">
-      <div class="column">
-        <div class="about-me__wrapper">
-          <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-out"
-            class="about-start">
-            <h2>About me</h2>
+        <div class="small__nav">
+          <div onclick="toggleMenu()" class="small__nav-lines">
+            <div class="top-line"></div>
+            <div class="middle-line"></div>
+            <div class="bottom-line"></div>
+          </div>
+          <ul class="small__nav-items">
+            <a href="#tiles">
+              <li class="small__nav-item">Home</li>
+            </a>
+            <a href="#landing__about-me">
+              <li class="small__nav-item">About/Blog</li>
+            </a>
+            <a href="#projects">
+              <li class="small__nav-item">Projects</li>
+            </a>
+            <a href="#goals__blog">
+              <li class="small__nav-item">Work About</li>
+            </a>
+            <a href="#contact">
+              <li class="small__nav-item">Contact</li>
+            </a>
+          </ul>
+        </div>
+      </nav>
+      <section id="landing__about-me">
+        <div class="column">
+          <div class="about-me__wrapper">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="0"
+              data-aos-duration="1500"
+              data-aos-easing="ease-in-out"
+              class="about-start"
+            >
+              <h2>About me</h2>
+              <hr />
+            </div>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="0"
+              data-aos-duration="1500"
+              data-aos-easing="ease-in-out"
+              class="about-me__top-banner"
+            >
+              <div class="about-me__icons">
+                <div class="about-me__icon">
+                  <div class="icon__wrapper">
+                    <i class="fa-solid fa-bolt"></i>
+                  </div>
+                  <h3>Quick</h3>
+                  <p>
+                    Making fast and reactive websites is alwasys an end goal for
+                    me!
+                  </p>
+                </div>
+                <div class="about-me__icon">
+                  <div class="icon__wrapper">
+                    <i class="fa-solid fa-explosion"></i>
+                  </div>
+                  <h3>Dynamic</h3>
+                  <p>
+                    I make web browsing enjoyable with interactive and moving
+                    pieces!
+                  </p>
+                </div>
+                <div class="about-me__icon">
+                  <div class="icon__wrapper">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                  </div>
+                  <h3>Useable</h3>
+                  <p>
+                    With good UI/UX you'll enjoy getting lost in the sauce that
+                    is my code.
+                  </p>
+                </div>
+                <div class="about-me__icon">
+                  <div class="icon__wrapper">
+                    <i class="fa-solid fa-book"></i>
+                  </div>
+                  <h3>Learning</h3>
+                  <p>
+                    I am always learning and looking to broaden my knowledge in
+                    the tech world!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="about-me__left-right">
+              <div
+                data-aos="fade-right"
+                data-aos-delay="0"
+                data-aos-duration="1500"
+                data-aos-easing="ease-in-out"
+                class="about-me__left"
+              >
+                <div class="about__img-wrapper">
+                  <img src="./assets/me.jpg" alt="" />
+                </div>
+                <div class="about-me__description">
+                  <h3>Like what you see?</h3>
+                  <p>
+                    I am a Frontend Developer striving to make easy to use,
+                    impactful, and memorable sites for all to use. <br />
+                    And if you like what you see feel free to <br />
+                    <a class="contact-me__landing" href="#contact">
+                      contact me!</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <div
+                data-aos="fade-left"
+                data-aos-delay="0"
+                data-aos-duration="1500"
+                data-aos-easing="ease-in-out"
+                class="about-me__right"
+              >
+                <div class="about__right-graph">
+                  <div class="blog__section">
+                    <h3
+                      data-aos="fade-up"
+                      data-aos-delay="0"
+                      data-aos-duration="1500"
+                      data-aos-easing="ease-in-out"
+                    >
+                      Check out some of my blogs below on the medium platform
+                      and follow along! (In construction)
+                    </h3>
+                    <div class="blog__wrapper">
+                      <div
+                        data-aos="fade-right"
+                        data-aos-delay="300"
+                        data-aos-duration="1500"
+                        data-aos-easing="ease-in-out"
+                        class="blog-item clickable"
+                      >
+                        <a
+                          target="_blank"
+                          href="https://medium.com/@taylir/more-about-me-and-what-i-want-e54cda3ebe10"
+                        >
+                          <div class="blog-img__wrapper">
+                            <img
+                              src="https://miro.medium.com/v2/resize:fit:720/0*MkHlOkImpiVzdGIr"
+                              alt=""
+                            />
+                          </div>
+                          <div class="blog__info">
+                            <h4>More about me!</h4>
+                          </div>
+                        </a>
+                      </div>
+                      <div
+                        data-aos="fade-right"
+                        data-aos-delay="150"
+                        data-aos-duration="1500"
+                        data-aos-easing="ease-in-out"
+                        class="blog-item clickable"
+                      >
+                        <a
+                          target="_blank"
+                          href="https://github.blog/2023-03-05-release-radar-feb-2023/"
+                        >
+                          <div class="blog-img__wrapper">
+                            <img
+                              src="https://github.blog/wp-content/uploads/2023/03/Release-Radar-Feb.jpg?resize=1200%2C630"
+                              alt=""
+                            />
+                          </div>
+                          <div class="blog__info">
+                            <h4>Interesting blog post I read! By:Github</h4>
+                          </div>
+                        </a>
+                      </div>
+                      <div
+                        data-aos="fade-right"
+                        data-aos-delay="0"
+                        data-aos-duration="1500"
+                        data-aos-easing="ease-in-out"
+                        class="blog-item clickable"
+                      >
+                        <a
+                          target="_blank"
+                          href="https://nextjs.org/blog/next-13"
+                        >
+                          <div class="blog-img__wrapper">
+                            <img
+                              src="https://imgs.search.brave.com/-VGwqkdXf0CFOGLTjJ9h2pTxdjwUH9oDuuJi4HJrhJc/rs:fit:909:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5N/bGxnaG8yM0JoTF9N/SDNSc2tpX3lBQUFB/QSZwaWQ9QXBp"
+                              alt=""
+                            />
+                          </div>
+                          <div class="blog__info">
+                            <h4>
+                              The new Next.js <br />
+                              By:Vercel
+                            </h4>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="projects"
+        data-aos="fade-up"
+        data-aos-delay="0"
+        data-aos-duration="1500"
+        data-aos-easing="ease-in-out"
+      >
+        <div>
+          <h2>Projects</h2>
+          <hr />
+        </div>
+        <div class="card-swiper">
+          <div class="card-groups">
+            <div class="card-group" data-index="0" data-status="active">
+              <div class="little-card card"></div>
+              <div class="big-card card"></div>
+              <div class="little-card card"></div>
+              <div class="big-card card"></div>
+              <div class="little-card card"></div>
+              <div class="big-card card"></div>
+              <div class="little-card card"></div>
+              <div class="big-card card">
+                <h3>
+                  I developed an eCommerce site using React for an online
+                  bookstore that includes dynamic API pulls and an updating
+                  cart, as well as allowing support for any number of books.
+                  <div class="project__links">
+                    <a
+                      href="https://github.com/Taylir/e-commerce"
+                      target="_blank"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a
+                      href="https://e-commerce-9lv509hol-taylir.vercel.app/"
+                      target="_blank"
+                    >
+                      <i class="fa-solid fa-link"></i>
+                    </a>
+                  </div>
+                </h3>
+              </div>
+            </div>
+            <div class="card-group" data-index="1" data-status="unknown">
+              <div class="little-card card"></div>
+              <div class="big-card card"></div>
+              <div class="little-card card"></div>
+              <div class="big-card card"></div>
+              <div class="little-card card"></div>
+              <div class="big-card card"></div>
+              <div class="little-card card"></div>
+              <div class="big-card card">
+                <h3>
+                  As a Frontend Simplified intern, I collaborated with a team to
+                  develop a dynamic and user-friendly interface for an NFT
+                  website. My responsibilities included implementing back-end
+                  API calls and ensuring efficient rendering of content.
+                  <div class="project__links">
+                    <a
+                      href="https://github.com/Taylir/taylor-internship"
+                      target="_blank"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a
+                      href="https://taylor-internship-19w96etcl-taylir.vercel.app/"
+                      target="_blank"
+                    >
+                      <i class="fa-solid fa-link"></i>
+                    </a>
+                  </div>
+                </h3>
+              </div>
+            </div>
+            <div class="card-group" data-index="2" data-status="unknown">
+              <div class="little-card card"></div>
+              <div class="big-card card"></div>
+              <div class="little-card card"></div>
+              <div class="big-card card"></div>
+              <div class="little-card card"></div>
+              <div class="big-card card"></div>
+              <div class="little-card card"></div>
+              <div class="big-card card">
+                <h3>
+                  A project I made for a client that only wanted a desktop
+                  responsive landing page. However I am taking this in as one of
+                  my 2 active projects at the moment to make this even better
+                  and more responsive.
+                  <div class="project__links">
+                    <a href="https://github.com/Taylir/treko" target="_blank">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://treko.vercel.app/" target="_blank">
+                      <i class="fa-solid fa-link"></i>
+                    </a>
+                  </div>
+                </h3>
+              </div>
+            </div>
+            <div class="card-group" data-index="3" data-status="unknown">
+              <div class="little-card card"></div>
+              <div class="big-card card"></div>
+              <div class="little-card card"></div>
+              <div class="big-card card"></div>
+              <div class="little-card card"></div>
+              <div class="big-card card"></div>
+              <div class="little-card card"></div>
+              <div class="big-card card">
+                <h3>
+                  For my second active project I will be making a hulu clone
+                  using Next.js and typescript. Currently the prototype is ready
+                  to check out but will have a more full version in the future.
+                  <div class="project__links">
+                    <a
+                      href="https://github.com/Taylir/Hulu-updated-recreated"
+                      target="_blank"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a
+                      href="https://hulu-updated-recreated.vercel.app/"
+                      target="_blank"
+                    >
+                      <i class="fa-solid fa-link"></i>
+                    </a>
+                  </div>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="card-swiper__buttons">
+            <button onclick="handleLeft()" id="left-arrow">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button onclick="handleRight()" id="right-arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="goals__blog">
+        <div class="column">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="0"
+            data-aos-duration="1500"
+            data-aos-easing="ease-in-out"
+            class="goals__header-title"
+          >
+            <h3>Here is a bit more about me</h3>
             <hr />
           </div>
-          <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-out"
-            class="about-me__top-banner">
-            <div class="about-me__icons">
-              <div class="about-me__icon">
-                <div class="icon__wrapper">
-                  <i class="fa-solid fa-bolt"></i>
-                </div>
-                <h3>Quick</h3>
+          <div
+            data-aos="fade-left"
+            data-aos-delay="0"
+            data-aos-duration="1500"
+            data-aos-easing="ease-in-out"
+            class="goals-section__wrapper"
+          >
+            <div
+              data-aos="fade-left"
+              data-aos-delay="0"
+              data-aos-duration="1500"
+              data-aos-easing="ease-in-out"
+              class="goals__sections"
+            >
+              <div class="goal__title">
+                <i class="fa-solid fa-desktop"></i>
+                <h3>Frontend Developer</h3>
                 <p>
-                  Making fast and reactive websites is alwasys an end goal for
-                  me!
+                  Currently I thrive as a Frontend Developer, where easy to
+                  follow yet beuatiful webdesign are things I value.
                 </p>
               </div>
-              <div class="about-me__icon">
-                <div class="icon__wrapper">
-                  <i class="fa-solid fa-explosion"></i>
-                </div>
-                <h3>Dynamic</h3>
+              <div class="goal__langs">
+                <span class="text-blue text-bold"
+                  >Tech I love working with:</span
+                >
                 <p>
-                  I make web browsing enjoyable with interactive and moving
-                  pieces!
+                  React, Next, Git, JavaScript, T3 Stack, firebase and looking
+                  to add much more!
                 </p>
               </div>
-              <div class="about-me__icon">
-                <div class="icon__wrapper">
-                  <i class="fa-solid fa-wand-magic-sparkles"></i>
-                </div>
-                <h3>Useable</h3>
+              <div class="goal__tools">
+                <span class="text-blue text-bold"
+                  >What I accomplish with the tech:</span
+                >
                 <p>
-                  With good UI/UX you'll enjoy getting lost in the sauce that
-                  is my code.
-                </p>
-              </div>
-              <div class="about-me__icon">
-                <div class="icon__wrapper">
-                  <i class="fa-solid fa-book"></i>
-                </div>
-                <h3>Learning</h3>
-                <p>
-                  I am always learning and looking to broaden my knowledge in
-                  the tech world!
+                  Build modern, scalable and performant web applications using
+                  React, Next.js, Git, JavaScript, T3 Stack and Firebase.
                 </p>
               </div>
             </div>
-          </div>
-          <div class="about-me__left-right">
-            <div data-aos="fade-right" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-out"
-              class="about-me__left">
-              <div class="about__img-wrapper">
-                <img src="./assets/me.jpg" alt="" />
-              </div>
-              <div class="about-me__description">
-                <h3>Like what you see?</h3>
+            <div
+              data-aos="fade-left"
+              data-aos-delay="150"
+              data-aos-duration="1500"
+              data-aos-easing="ease-in-out"
+              class="goals__sections"
+            >
+              <div class="goal__title">
+                <i class="fa-solid fa-person-rays"></i>
+                <h3>About my self.</h3>
                 <p>
-                  I am a Frontend Developer striving to make easy to use,
-                  impactful, and memorable sites for all to use. <br />
-                  And if you like what you see feel free to <br />
-                  <a class="contact-me__landing" href="#contact"> contact me!</a>
+                  I have always loved computers from building my own to playing
+                  around with websites code.
+                </p>
+              </div>
+              <div class="goal__langs">
+                <span class="text-blue text-bold"
+                  >What I bring to the table:</span
+                >
+                <p>
+                  Hardwork, waking up on time (I know pretty rare these days),
+                  self drive and motivation, a want to make your page better.
+                </p>
+              </div>
+              <div class="goal__tools">
+                <span class="text-blue text-bold">What you already know:</span>
+                <p>
+                  You already like me , thank you by the way, I like you too.
+                  But you wonder "Why should I hire you Taylor", look at the
+                  next section and you'll know.
                 </p>
               </div>
             </div>
-            <div data-aos="fade-left" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-out"
-              class="about-me__right">
-              <div class="about__right-graph">
-                <!-- Current Working area -->
-
-
-
-                <div class="graph-bar">
-                  <p class="bold">HTML</p>
-                  <div class="bar-growth"></div>
-                  <div style="width: 8%;" class="skill-precentage">92%</div>
-                </div>
-                <div class="graph-bar">
-                  <p class="bold">CSS</p>
-                  <div class="bar-growth"></div>
-                  <div style="width: 12%;" class="skill-precentage">88%</div>
-                </div>
-                <div class="graph-bar">
-                  <p class="bold">React</p>
-                  <div class="bar-growth"></div>
-                  <div style="width: 15%;" class="skill-precentage">85%</div>
-                </div>
-                <div class="graph-bar">
-                  <p class="bold">JavaScript</p>
-
-                  <div class="bar-growth"></div>
-                  <div style="width: 20%;" class="skill-precentage">80%</div>
-                </div>
-                <div class="graph-bar">
-                  <p class="bold">Next.Js</p>
-                  <div class="bar-growth"></div>
-                  <div style="width: 35%;" class="skill-precentage">65%</div>
-                </div>
-                <div class="graph-bar">
-                  <p class="bold">TypeScript</p>
-                  <div class="bar-growth"></div>
-                  <div style="width: 30%;" class="skill-precentage">70%</div>
-                </div>
-                <div class="graph-bar">
-                  <p class="bold">Python</p>
-                  <div class="bar-growth"></div>
-                  <div style="width: 40%;" class="skill-precentage">60%</div>
-                </div>
-                <div class="graph-bar">
-                  <p class="bold">UI Design</p>
-                  <div class="bar-growth"></div>
-                  <div style="width: 25%;" class="skill-precentage">75%</div>
-                </div>
-                <div class="graph-bar">
-                  <p class="bold">SQL</p>
-                  <div class="bar-growth"></div>
-                  <div style="width: 50%;" class="skill-precentage">50%</div>
-                </div>
-                <div class="graph-bar">
-                  <p class="bold">Firebase</p>
-                  <div class="bar-growth"></div>
-                  <div style="width: 20%;" class="skill-precentage">80%</div>
-                </div>
+            <div
+              data-aos="fade-left"
+              data-aos-delay="300"
+              data-aos-duration="1500"
+              data-aos-easing="ease-in-out"
+              class="goals__sections"
+            >
+              <div class="goal__title">
+                <i class="fa-solid fa-terminal"></i>
+                <h3>Work and skill set.</h3>
+                <p>
+                  Having experince as an intern, I possess the skills and
+                  knowledge to seamlessly integrate into any team and contribute
+                  effectively to the development of web applications.
+                </p>
               </div>
-
-
-
-              <!--   Current working area -->
+              <div class="goal__langs">
+                <span class="text-blue text-bold">How I can contribute:</span>
+                <p>
+                  I have the expertise to seamlessly integrate backend
+                  functionalities into frontend development and possess a keen
+                  eye for optimizing and enhancing website aesthetics.
+                </p>
+              </div>
+              <div class="goal__tools">
+                <span class="text-blue text-bold"
+                  >What I learned in this time:</span
+                >
+                <p>
+                  Api pulls from a backend,
+                  <br />
+                  Version control with Git,
+                  <br />
+                  Scalability with Components,
+                  <br />
+                  UI/UX designs that grab the eyes,
+                  <br />
+                  And so much more that you will have to see!
+                </p>
+              </div>
             </div>
           </div>
         </div>
+      </section>
+      <section id="contact">
+        <div class="background-triangle">
+          <div class="internal-traiangle"></div>
+        </div>
+        <div class="column">
+          <div class="contact-form__wrapper">
+            <h3>Reach out to me here!</h3>
+            <hr />
+            <form onsubmit="contact(event)" class="contact__form">
+              <div class="name__input">
+                <input
+                  oninput="checkValue(event, 'input-value-name')"
+                  type="text"
+                  name="user_name"
+                  required
+                />
+                <label class="input-value-name" for="name">Name</label>
+              </div>
+              <div class="email__input">
+                <input
+                  oninput="checkValue(event, 'input-value-email')"
+                  type="email"
+                  name="user_email"
+                  required
+                />
+                <label class="input-value-email" for="e_mail">Email</label>
+              </div>
+              <div class="textarea-input">
+                <textarea
+                  oninput="checkValue(event, 'input-value-textarea')"
+                  cols="30"
+                  rows="7"
+                  name="message"
+                  required
+                ></textarea>
+                <label class="input-value-textarea">Message</label>
+              </div>
+              <button>Send it my way!</button>
+            </form>
+            <div class="contact__loading">
+              <!--container -->
+              <div class="loading">
+                <span class="shape shape-1"></span>
+                <span class="shape shape-2"></span>
+                <span class="shape shape-3"></span>
+                <span class="shape shape-4"></span>
+              </div>
+            </div>
+            <div class="contact__success">
+              I got the message and I will be reaching out to you soon!
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <figure>
+        <a href="#">
+          <img class="footer__logo" src="./assets/nav-logo-p.png" alt="" />
+        </a>
+      </figure>
+      <p>
+        Learning and growing every day!
+        <br />
+        Building better and greater things!
+      </p>
+      <div class="footer__social-links">
+        <a
+          href="https://www.linkedin.com/in/taylor-lirot-232123262/"
+          target="_blank"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Taylir" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="./assets/Taylor Resume 2-21-2023.docx.pdf" target="_blank">
+          <i class="fa-solid fa-file-pdf"></i>
+        </a>
       </div>
-    </section>
-    <section id="projects" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-out">
-
-      <div>
-        <h2>Projects</h2>
-        <hr />
-      </div>
-      <div class="card-swiper">
-        <div class="card-groups">
-          <div class="card-group" data-index="0" data-status="active">
-            <div class="little-card card"></div>
-            <div class="big-card card"></div>
-            <div class="little-card card"></div>
-            <div class="big-card card"></div>
-            <div class="little-card card"></div>
-            <div class="big-card card"></div>
-            <div class="little-card card"></div>
-            <div class="big-card card">
-              <h3>
-                I developed an eCommerce site using React for an online
-                bookstore that includes dynamic API pulls and an updating
-                cart, as well as allowing support for any number of books.
-                <div class="project__links">
-                  <a href="https://github.com/Taylir/e-commerce" target="_blank">
-                    <i class="fa-brands fa-github"></i>
-                  </a>
-                  <a href="https://e-commerce-9lv509hol-taylir.vercel.app/" target="_blank">
-                    <i class="fa-solid fa-link"></i>
-                  </a>
-                </div>
-              </h3>
-            </div>
-          </div>
-          <div class="card-group" data-index="1" data-status="unknown">
-            <div class="little-card card"></div>
-            <div class="big-card card"></div>
-            <div class="little-card card"></div>
-            <div class="big-card card"></div>
-            <div class="little-card card"></div>
-            <div class="big-card card"></div>
-            <div class="little-card card"></div>
-            <div class="big-card card">
-              <h3>
-                As a Frontend Simplified intern, I collaborated with a team to
-                develop a dynamic and user-friendly interface for an NFT
-                website. My responsibilities included implementing back-end
-                API calls and ensuring efficient rendering of content.
-                <div class="project__links">
-                  <a href="https://github.com/Taylir/taylor-internship" target="_blank">
-                    <i class="fa-brands fa-github"></i>
-                  </a>
-                  <a href="https://taylor-internship-19w96etcl-taylir.vercel.app/" target="_blank">
-                    <i class="fa-solid fa-link"></i>
-                  </a>
-                </div>
-              </h3>
-            </div>
-          </div>
-          <div class="card-group" data-index="2" data-status="unknown">
-            <div class="little-card card"></div>
-            <div class="big-card card"></div>
-            <div class="little-card card"></div>
-            <div class="big-card card"></div>
-            <div class="little-card card"></div>
-            <div class="big-card card"></div>
-            <div class="little-card card"></div>
-            <div class="big-card card">
-              <h3>
-                A project I made for a client that only wanted a desktop
-                responsive landing page. However I am taking this in as one of
-                my 2 active projects at the moment to make this even better and more
-                responsive.
-                <div class="project__links">
-                  <a href="https://github.com/Taylir/treko" target="_blank">
-                    <i class="fa-brands fa-github"></i>
-                  </a>
-                  <a href="https://treko.vercel.app/" target="_blank">
-                    <i class="fa-solid fa-link"></i>
-                  </a>
-                </div>
-              </h3>
-            </div>
-          </div>
-          <div class="card-group" data-index="3" data-status="unknown">
-            <div class="little-card card"></div>
-            <div class="big-card card"></div>
-            <div class="little-card card"></div>
-            <div class="big-card card"></div>
-            <div class="little-card card"></div>
-            <div class="big-card card"></div>
-            <div class="little-card card"></div>
-            <div class="big-card card">
-              <h3>
-                For my second active project I will be making
-                a hulu clone using Next.js and typescript. Currently the
-                prototype is ready to check out but will have a more full
-                version in the future.
-                <div class="project__links">
-                  <a href="https://github.com/Taylir/Hulu-updated-recreated" target="_blank">
-                    <i class="fa-brands fa-github"></i>
-                  </a>
-                  <a href="https://hulu-updated-recreated.vercel.app/" target="_blank">
-                    <i class="fa-solid fa-link"></i>
-                  </a>
-                </div>
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div class="card-swiper__buttons">
-          <button onclick="handleLeft()" id="left-arrow">
-            <i class="fa-solid fa-arrow-left"></i>
-          </button>
-          <button onclick="handleRight()" id="right-arrow">
-            <i class="fa-solid fa-arrow-right"></i>
-          </button>
-        </div>
-      </div>
-    </section>
-    <section id="goals__blog">
-      <div class="column">
-        <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-out"
-          class="goals__header-title">
-          <h3>Here is a bit more about me</h3>
-          <hr />
-        </div>
-        <div data-aos="fade-left" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-out"
-          class="goals-section__wrapper">
-          <div data-aos="fade-left" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-out"
-            class="goals__sections">
-            <div class="goal__title">
-              <i class="fa-solid fa-desktop"></i>
-              <h3>Frontend Developer</h3>
-              <p>
-                Currently I thrive as a Frontend Developer, where easy to
-                follow yet beuatiful webdesign are things I value.
-              </p>
-            </div>
-            <div class="goal__langs">
-              <span class="text-blue text-bold">Tech I love working with:</span>
-              <p>
-                React, Next, Git, JavaScript, T3 Stack, firebase and looking
-                to add much more!
-              </p>
-            </div>
-            <div class="goal__tools">
-              <span class="text-blue text-bold">What I accomplish with the tech:</span>
-              <p>
-                Build modern, scalable and performant web applications using
-                React, Next.js, Git, JavaScript, T3 Stack and Firebase.
-              </p>
-            </div>
-          </div>
-          <div data-aos="fade-left" data-aos-delay="150" data-aos-duration="1500" data-aos-easing="ease-in-out"
-            class="goals__sections">
-            <div class="goal__title">
-              <i class="fa-solid fa-person-rays"></i>
-              <h3>About my self.</h3>
-              <p>
-                I have always loved computers from building my own to playing
-                around with websites code.
-              </p>
-            </div>
-            <div class="goal__langs">
-              <span class="text-blue text-bold">What I bring to the table:</span>
-              <p>
-                Hardwork, waking up on time (I know pretty rare these days),
-                self drive and motivation, a want to make your page better.
-              </p>
-            </div>
-            <div class="goal__tools">
-              <span class="text-blue text-bold">What you already know:</span>
-              <p>
-                You already like me , thank you by the way, I like you too. But
-                you wonder "Why should I hire you Taylor", look at the next section and you'll know.
-              </p>
-            </div>
-          </div>
-          <div data-aos="fade-left" data-aos-delay="300" data-aos-duration="1500" data-aos-easing="ease-in-out"
-            class="goals__sections">
-            <div class="goal__title">
-              <i class="fa-solid fa-terminal"></i>
-              <h3>Work and skill set.</h3>
-              <p>
-                Having experince as an intern, I possess the skills and
-                knowledge to seamlessly integrate into any team and contribute
-                effectively to the development of web applications.
-              </p>
-            </div>
-            <div class="goal__langs">
-              <span class="text-blue text-bold">How I can contribute:</span>
-              <p>
-                I have the expertise to seamlessly integrate backend
-                functionalities into frontend development and possess a keen
-                eye for optimizing and enhancing website aesthetics.
-              </p>
-            </div>
-            <div class="goal__tools">
-              <span class="text-blue text-bold">What I learned in this time:</span>
-              <p>
-                Api pulls from a backend,
-                <br />
-                Version control with Git,
-                <br />
-                Scalability with Components,
-                <br />
-                UI/UX designs that grab the eyes,
-                <br />
-                And so much more that you will have to see!
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="blog__section">
-          <h3 data-aos="fade-up" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-out">
-            Check out some of my blogs below on the medium platform and follow
-            along! (In construction)
-          </h3>
-          <div class="blog__wrapper">
-            <div data-aos="fade-right" data-aos-delay="300" data-aos-duration="1500" data-aos-easing="ease-in-out"
-              class="blog-item clickable">
-              <div class="blog-img__wrapper">
-                <img src="./assets/workspace-1280538.jpg" alt="" />
-              </div>
-              <div class="blog__info">
-                <h4>The best atmosphere to work in.</h4>
-                <p>
-                  With working from home becoming a more incresingly popular
-                  style
-                </p>
-              </div>
-            </div>
-            <div data-aos="fade-right" data-aos-delay="150" data-aos-duration="1500" data-aos-easing="ease-in-out"
-              class="blog-item clickable">
-              <div class="blog-img__wrapper">
-                <img src="./assets/code-1076536_1920.jpg" alt="" />
-              </div>
-              <div class="blog__info">
-                <h4>The best atmosphere to work in.</h4>
-                <p>
-                  With working from home becoming a more incresingly popular
-                  style
-                </p>
-              </div>
-            </div>
-            <div data-aos="fade-right" data-aos-delay="0" data-aos-duration="1500" data-aos-easing="ease-in-out"
-              class="blog-item clickable">
-              <div class="blog-img__wrapper">
-                <img src="./assets/code-1076536_1920.jpg" alt="" />
-              </div>
-              <div class="blog__info">
-                <h4>The best atmosphere to work in.</h4>
-                <p>
-                  With working from home becoming a more incresingly popular
-                  style
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="contact">
-      <div class="background-triangle">
-        <div class="internal-traiangle"></div>
-      </div>
-      <div class="column">
-        <div class="contact-form__wrapper">
-          <h3>Reach out to me here!</h3>
-          <hr />
-          <form onsubmit="contact(event)" class="contact__form">
-            <div class="name__input">
-              <input oninput="checkValue(event, 'input-value-name')" type="text" name="user_name" required />
-              <label class="input-value-name" for="name">Name</label>
-            </div>
-            <div class="email__input">
-              <input oninput="checkValue(event, 'input-value-email')" type="email" name="user_email" required />
-              <label class="input-value-email" for="e_mail">Email</label>
-            </div>
-            <div class="textarea-input">
-              <textarea oninput="checkValue(event, 'input-value-textarea')" cols="30" rows="7" name="message"
-                required></textarea>
-              <label class="input-value-textarea">Message</label>
-            </div>
-            <button>Send it my way!</button>
-          </form>
-          <div class="contact__loading"> <!--container -->
-            <div class="loading">
-              <span class="shape shape-1"></span>
-              <span class="shape shape-2"></span>
-              <span class="shape shape-3"></span>
-              <span class="shape shape-4"></span>
-            </div>
-          </div>
-          <div class="contact__success">
-            I got the message and I will be reaching out to you soon!
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer id="footer">
-    <figure>
-      <a href="#">
-        <img class="footer__logo" src="./assets/nav-logo-p.png" alt="" />
-      </a>
-    </figure>
-    <p>
-      Learning and growing every day!
-      <br />
-      Building better and greater things!
-    </p>
-    <div class="footer__social-links">
-      <a href="https://www.linkedin.com/in/taylor-lirot-232123262/" target="_blank">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/Taylir" target="_blank">
-        <i class="fa-brands fa-github"></i>
-      </a>
-      <a href="./assets/Taylor Resume 2-21-2023.docx.pdf" target="_blank">
-        <i class="fa-solid fa-file-pdf"></i>
-      </a>
-    </div>
-    <p>
-      Created, desinged, and coded all by me!
-      <br />
-      &copy;2023
-    </p>
-  </footer>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-</body>
-
+      <p>
+        Created, desinged, and coded all by me!
+        <br />
+        &copy;2023
+      </p>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
