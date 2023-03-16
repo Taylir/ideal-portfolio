@@ -856,6 +856,98 @@ input:-webkit-autofill:active {
   transition: none;
 }
 
+.expanding_hovers {
+  display: flex;
+  height: 50vmin;
+  width: 90vmin;
+  gap: 1rem;
+}
+
+.box1 {
+  background: url("./assets/internship.png");
+  display: grid;
+  place-items: center;
+}
+
+.box2 {
+  background: url("./assets/shareme.png");
+}
+
+.box3 {
+  background: url("./assets/Beaots.png");
+}
+
+.box4 {
+  background: url("./assets/Spotify.png");
+}
+
+.expanding_hovers > div {
+  position: relative;
+  flex: 1;
+  border-radius: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  transition: all 1s cubic-bezier(0.25, 0.4, 0.45, 1.4);
+}
+
+.expanding_hovers > div > div {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 12px;
+  text-align: center;
+  color: white;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  visibility: hidden;
+  opacity: 0;
+  height: 100.3%;
+  width: 100.3%;
+  backdrop-filter: blur(2px);
+  transition: all 500ms cubic-bezier(0.25, 0.4, 0.45, 1.4) ease-in;
+}
+
+.project__info > div > h4 {
+  font-size: 4vmin;
+  margin-bottom: 24px;
+  font-weight: bold;
+}
+
+.project__info > div > h5 {
+  font-size: 2vmin;
+  margin-bottom: 24px;
+  font-weight: bold;
+}
+
+.project__info > p {
+  font-size: 1.75vmin;
+  line-height: 1.5;
+}
+
+.project__panorama-links {
+  font-size: 4vmin;
+}
+
+.project__panorama-links > a:not(:last-child) {
+  margin-right: 30px;
+}
+
+.expanding_hovers > div:hover {
+  flex: 5;
+  background-size: auto 120%;
+}
+
+.expanding_hovers > div:hover > div {
+  transition-delay: 0.5s;
+  visibility: visible;
+  opacity: 1;
+}
+
 /* (End) 5. Projects */
 
 /* (Start) 6. Goal/Blogs */
