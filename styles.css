@@ -1215,6 +1215,20 @@ input:-webkit-autofill:active {
   border: 1px solid var(--logo-grey);
   text-align: center;
   font-weight: bold;
+  transition: border 300ms ease-in-out, background-color 300ms ease-in-out,
+    box-shadow 100ms ease-in-out;
+}
+
+.contact__form > button:hover {
+  border: 1px solid var(--fav-black);
+  background-color: var(--logo-grey);
+  box-shadow: 0 2px 4px 1px var(--fav-black);
+  cursor: pointer;
+}
+
+.contact__form > button:active {
+  transform: translate(0, 2px);
+  box-shadow: 0 -1px 4px 1px var(--fav-black);
 }
 
 .contact__form input,
