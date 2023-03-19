@@ -954,6 +954,7 @@ input:-webkit-autofill:active {
 
 #goals__blog {
   height: 100%;
+  padding: 16px;
   background: linear-gradient(
     to bottom,
     var(--logo-grey) 0%,
