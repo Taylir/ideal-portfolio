@@ -252,13 +252,21 @@ input:-webkit-autofill:active {
 
 .nav__items {
   display: flex;
+  gap: 44px;
   justify-content: flex-start;
+  align-items: center;
   color: whitesmoke;
   font-size: 20px;
 }
 
+.nav__items>a:last-child {
+  font-weight: bold;
+  background-color: red;
+  padding: 4px;
+  border-radius: 4px;
+}
+
 .nav__item {
-  margin-right: 44px;
   position: relative;
 }
 
