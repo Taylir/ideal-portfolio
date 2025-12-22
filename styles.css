@@ -19,6 +19,13 @@
   --logo-red: #ff4057;
   --logo-grey: #dcdcdc;
   --fav-black: #242424;
+  --background_base: oklch(0.2603 0 0);
+  --background_middle: oklch(0.3103 0 0);
+  --background_top: oklch(0.3503 0 0);
+}
+
+body.light {
+  --background_base: oklch(0.9 0 0) --background_middle: oklch(0.8 0 0) --background_top: oklch(0.7 0 0)
 }
 
 * {
