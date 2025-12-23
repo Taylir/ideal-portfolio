@@ -2,7 +2,7 @@
   "dependencies": {
     "animejs": "^3.2.1"
   },
-  {
+  "engines": {
     "node":"24.x"
   }
 }
