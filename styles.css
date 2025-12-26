@@ -323,6 +323,8 @@ input:-webkit-autofill:active {
     radial-gradient(circle at 90% 80%, rgba(52, 80, 250, 0.15) 0%, transparent 40%);
   color: var(--logo-grey);
   padding-bottom: 100px;
+  display: grid;
+  place-items: center;
 }
 
 .about-me__wrapper {
@@ -365,11 +367,13 @@ input:-webkit-autofill:active {
   border-radius: 20px;
   padding: 30px 20px;
 
-  flex: 1 1 220px;
   max-width: 300px;
   display: flex;
+  flex-direction: column;
+  flex: 1 1 220px;
   align-items: center;
   transition: transform 300ms ease, border-color 300ms ease;
+  user-select: none;
 }
 
 .about-me__icon:hover {
