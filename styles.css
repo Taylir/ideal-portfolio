@@ -655,13 +655,14 @@ input:-webkit-autofill:active {
 /* (Start) 6. Goal/Blogs */
 
 #goals__blog {
-  height: 100%;
-  padding: 16px;
-  background: linear-gradient(to bottom,
-      var(--logo-grey) 0%,
-      var(--logo-grey) 50%,
-      var(--fav-black) 50%,
-      var(--fav-black) 100%);
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 20px 100px;
+
+  background-color: var(--fav-black);
+  background-image:
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 60%);
+
   display: flex;
   flex-direction: column;
   align-items: center;
