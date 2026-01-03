@@ -665,16 +665,17 @@ input:-webkit-autofill:active {
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 .goals__header-title {
-  text-align: center;
-  margin-bottom: 60px;
+  margin: 0 auto 60px;
   max-width: 800px;
 }
 
 .goals__header-title>h3 {
+  text-align: center;
   margin-top: 32px;
   margin-bottom: 16px;
   font-size: 48px;
@@ -703,55 +704,76 @@ input:-webkit-autofill:active {
 }
 
 .goals__sections {
-  /* The Glass Effect */
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   padding: 40px 30px;
-
-  /* Layout */
   flex: 1 1 300px;
-  /* Min width 300px, but can grow */
   max-width: 400px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  /* Space between internal sections */
   text-align: center;
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
+.goals__sections:hover {
+  transform: translateY(-10px);
+  border-color: rgba(52, 80, 250, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
 .goals__sections:not(:last-of-type) {
-  border-right: 1px solid rgba(105, 105, 105, 0.4);
+  border-right: none;
+}
+
+.goal__title>i {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+
+  font-size: 48px;
+  color: var(--logo-red);
+  text-shadow: 0 0 20px rgba(255, 64, 87, 0.4);
+  margin-bottom: 20px;
+  display: inline-block;
 }
 
 .goal__title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-bottom: 1px solid rgba(36, 36, 36, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-.goal__langs {
-  margin-top: 16px;
+.goal__title h3 {
+  font-size: 24px;
+  color: whitesmoke;
+  margin-bottom: 10px;
 }
 
-.goal__title>.fa-desktop,
-.goal__title>.fa-person-rays,
-.goal__title>.fa-terminal {
-  background-color: rgb(51, 160, 133);
-  padding: 20px;
-  border-radius: 100%;
-  font-size: 32px;
-  margin-bottom: 32px;
+.goal__title p,
+.goal__langs p,
+.goal__tools p {
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
-.goal__title>p,
-.goal__langs>p,
-.goal__tools>p {
-  margin-top: 8px;
+.text-blue {
+  display: block;
+  color: #5580ff;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.goal__langs,
+.goal__tools {
+  margin-top: 10px;
 }
 
 .blog__section {
