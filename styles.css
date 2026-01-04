@@ -1062,30 +1062,34 @@ input:-webkit-autofill:active {
 
 /* (Start) 8.Footer */
 
-#footer {
-  border-top: 2px solid var(--logo-grey);
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-  box-shadow: 0px -4px 4px var(--logo-red);
-  height: 45vmin;
+footer {
+  color: white;
+  height: 8rem;
   width: 100%;
-  background-color: var(--fav-black);
+  background-color: #1f2937;
   display: flex;
   flex-direction: column;
+  gap: 12px;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  position: relative;
 }
 
-.footer__logo {
-  height: 12vmin;
-  margin-bottom: 16px;
+footer p {
+  color: #ffffff80;
+}
+
+.footerEnd {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  bottom: 0;
+  background-image: linear-gradient(90deg, coral, #105e82);
 }
 
 .footer__social-links {
   font-size: 3vmin;
   display: flex;
-  margin-bottom: 40px;
 }
 
 .footer__social-links>a {
