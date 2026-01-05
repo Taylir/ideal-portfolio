@@ -312,24 +312,37 @@ input:-webkit-autofill:active {
 }
 
 #mobile__nav {
-  /*display: none;*/
-  height: 100%;
+  display: none;
   background-color: #14141490;
 }
 
 #mobile__nav-items {
-  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
   color: whitesmoke;
   font-weight: bold;
   font-size: 4rem;
-  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  z-index: 10;
+}
+
+.mobile__nav-item {
+  flex: 1;
+}
+
+.mobile__nav-item:not(:last-child) {
+  border-bottom: 4px solid red;
 }
 
 .mobile__nav-item>a {
-  display: inline-block;
+  height: 100%;
+  display: grid;
+  place-items: center;
 }
 
 /*(End) 3.End of Nav Bar  */
