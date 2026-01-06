@@ -208,7 +208,6 @@ input:-webkit-autofill:active {
   background-color: rgba(255, 255, 255, 0.3);
   color: white;
   width: 35vmin;
-  padding: 12px 16px;
   border: 2px solid var(--g1);
   border-radius: 8px;
   transition: visibility 900ms ease-in-out, opacity 900ms ease-in-out,
@@ -217,9 +216,8 @@ input:-webkit-autofill:active {
 }
 
 #landing-button>a {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  display: block;
+  padding: 12px 16px;
 }
 
 .tiles__wrapper.toggled #landing-button {
@@ -322,7 +320,6 @@ input:-webkit-autofill:active {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 100vh;
   color: whitesmoke;
   font-weight: bold;
   font-size: 4rem;
