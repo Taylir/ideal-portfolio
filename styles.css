@@ -535,6 +535,7 @@ input:-webkit-autofill:active {
 
 /* --- SECTION CONTAINER --- */
 #projects {
+  scroll-margin: 80px;
   position: relative;
   min-height: 100vh;
   /* Seamless continuation of the dark background */
