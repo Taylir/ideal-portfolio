@@ -311,10 +311,12 @@ input:-webkit-autofill:active {
 
 #mobile__nav {
   display: none;
-  background-color: #14141490;
 }
 
 #mobile__nav-items {
+  background-color: #ffffff50;
+  backdrop-filter: blur(20px);
+  margin: 40px;
   position: fixed;
   top: 0;
   left: 0;
@@ -330,6 +332,12 @@ input:-webkit-autofill:active {
 
 .mobile__nav-item {
   flex: 1;
+  transition: all 200ms ease-in-out;
+}
+
+.mobile__nav-item:hover {
+  background-color: #f5fffa50;
+  color: #242424
 }
 
 .mobile__nav-item:not(:last-child) {
@@ -347,6 +355,7 @@ input:-webkit-autofill:active {
 
 /* (Start) 4. About me */
 #landing__about-me {
+  scroll-margin: 30px;
   background-color: var(--fav-black);
   position: relative;
   background-image:
