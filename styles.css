@@ -1177,6 +1177,7 @@ footer p {
 
 /* (End) 8.Footer */
 
+/* Fix the future of the media pages */
 @media (max-width: 1180px) {
   .about-me__icons {
     display: flex;
