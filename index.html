@@ -433,61 +433,59 @@
         </div>
       </section>
       <section id="contact">
-        <div class="goal_column">
-          <div class="contact-form__wrapper">
-            <div class="form-header">
-              <h3>Reach out to me!</h3>
-              <p>Have a question or just want to say hi?</p>
-            </div>
+        <div class="contact-form__wrapper">
+          <div class="form-header">
+            <h3>Reach out to me!</h3>
+            <p>Have a question or just want to say hi?</p>
+          </div>
+          
+          <form onsubmit="contact(event)" class="contact__form">
             
-            <form onsubmit="contact(event)" class="contact__form">
-              
-              <div class="form-left">
-                <div class="input-group name__input">
-                  <input
-                    oninput="checkvalue(event, 'input-value-name')"
-                    type="text"
-                    name="user_name"
-                    id="name"
-                    required
-                  />
-                  <label class="input-value-name" for="name">name</label>
-                </div>
-                
-                <div class="input-group email__input">
-                  <input
-                    oninput="checkvalue(event, 'input-value-email')"
-                    type="email"
-                    name="user_email"
-                    id="e_mail"
-                    required
-                  />
-                  <label class="input-value-email" for="e_mail">email</label>
-                </div>
-              </div>
-
-              <div class="input-group textarea-input">
-                <textarea
-                  oninput="checkvalue(event, 'input-value-textarea')"
-                  name="message"
-                  id="message"
+            <div class="form-left">
+              <div class="input-group name__input">
+                <input
+                  oninput="checkvalue(event, 'input-value-name')"
+                  type="text"
+                  name="user_name"
+                  id="name"
                   required
-                ></textarea>
-                <label class="input-value-textarea" for="message">message</label>
+                />
+                <label class="input-value-name" for="name">name</label>
               </div>
-
-              <button class="submit-btn">
-                send message <i class="fa-solid fa-paper-plane"></i>
-              </button>
-            </form>
-
-            <div class="contact__loading">
-              <div class="loading-spinner"></div>
+              
+              <div class="input-group email__input">
+                <input
+                  oninput="checkvalue(event, 'input-value-email')"
+                  type="email"
+                  name="user_email"
+                  id="e_mail"
+                  required
+                />
+                <label class="input-value-email" for="e_mail">email</label>
+              </div>
             </div>
-            <div class="contact__success">
-              <h3>message sent!</h3>
-              <p>i'll get back to you shortly.</p>
+
+            <div class="input-group textarea-input">
+              <textarea
+                oninput="checkvalue(event, 'input-value-textarea')"
+                name="message"
+                id="message"
+                required
+              ></textarea>
+              <label class="input-value-textarea" for="message">message</label>
             </div>
+
+            <button class="submit-btn">
+              send message <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+
+          <div class="contact__loading">
+            <div class="loading-spinner"></div>
+          </div>
+          <div class="contact__success">
+            <h3>message sent!</h3>
+            <p>i'll get back to you shortly.</p>
           </div>
         </div>
       </section>
