@@ -764,10 +764,6 @@ input:-webkit-autofill:active {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.goals__sections:not(:last-of-type) {
-  border-right: none;
-}
-
 .goal__title>i {
   background-color: transparent;
   padding: 0;
@@ -1212,7 +1208,6 @@ footer p {
       align-items: center;
       margin-top: 28px;
       padding-top: 8px;
-      border-top: 1px solid var(--logo-grey);
     }
 
     .about-me__right {
@@ -1259,7 +1254,7 @@ footer p {
     padding: 8px;
   }
 
-  .goals__sections:not(:last-of-type) {
+  .goals__sections {
     border: none;
     border-bottom: 1px solid var(--fav-black);
   }
