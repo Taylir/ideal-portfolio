@@ -367,7 +367,7 @@ input:-webkit-autofill:active {
 }
 
 #mobile__nav-items {
-  height: calc(100vh - 120px);
+  height: calc(100dvh - 120px);
   border-radius: 12px;
   margin: 60px;
   position: fixed;
