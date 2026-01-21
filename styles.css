@@ -314,8 +314,9 @@ input:-webkit-autofill:active {
 }
 
 #mobile__nav-items {
-  background-color: #ffffff50;
+  background-color: #ffffff80;
   backdrop-filter: blur(20px);
+  border-radius: 12px;
   margin: 40px;
   position: fixed;
   top: 0;
