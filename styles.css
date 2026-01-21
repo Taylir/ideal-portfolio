@@ -1343,6 +1343,7 @@ footer p {
 
   .mobileMenuTop.hidden~#mobile__nav-items,
   .mobileMenuTop.hidden~.mobileMenuBottom {
+    z-index: -5;
     height: 0;
     visibility: hidden;
     opacity: 0;
