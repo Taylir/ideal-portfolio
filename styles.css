@@ -320,6 +320,7 @@ input:-webkit-autofill:active {
   background-color: #ffffff80;
   backdrop-filter: blur(20px);
   overflow: hidden;
+  transition: all 400ms ease-in-out;
 }
 
 .mobileMenuTop,
@@ -366,6 +367,7 @@ input:-webkit-autofill:active {
 }
 
 #mobile__nav-items {
+  height: 100%;
   border-radius: 12px;
   margin: 60px;
   position: fixed;
@@ -1343,10 +1345,14 @@ footer p {
 
   .mobileMenuTop.hidden~#mobile__nav-items,
   .mobileMenuTop.hidden~.mobileMenuBottom {
-    z-index: -5;
     height: 0;
     visibility: hidden;
-    opacity: 0;
+    bottom: 100%;
+    z-index: -1;
+  }
+
+  .mobileMenuTop.hidden~.mobileMenuBottom {
+    border-top: none;
   }
 
   .blog__section>h3 {
