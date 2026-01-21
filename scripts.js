@@ -131,8 +131,10 @@ let isClicked = false;
 
 function toggleMenu() {
   isClicked = !isClicked;
+  const body = document.querySelector("body");
   const hiddenSelector = document.querySelector(".mobileMenuTop");
   hiddenSelector.classList.toggle('hidden');
+  body.classList.toggle("open")
 }
 //Above is the code for the small nav
 

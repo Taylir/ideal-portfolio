@@ -1338,6 +1338,10 @@ footer p {
 
 @media (max-width: 600px) {
 
+  body.open {
+    overflow-y: hidden;
+  }
+
   .nav__bar,
   .nav__items {
     display: none;
@@ -1345,6 +1349,10 @@ footer p {
 
   #mobile__nav {
     display: block;
+  }
+
+  #mobile__nav-items {
+    font-size: 2.5rem;
   }
 
   .mobileMenuTop.hidden~#mobile__nav-items,
