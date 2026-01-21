@@ -39,6 +39,7 @@ body.light {
 }
 
 body {
+  position: relative;
   background-color: #242424;
   height: 100vh;
   overflow-y: scroll;
@@ -323,7 +324,7 @@ input:-webkit-autofill:active {
 
 .mobileMenuTop,
 .mobileMenuBottom {
-  height: 40px;
+  height: 60px;
   width: 100%;
   position: fixed;
   z-index: 11;
@@ -366,7 +367,7 @@ input:-webkit-autofill:active {
 
 #mobile__nav-items {
   border-radius: 12px;
-  margin: 40px;
+  margin: 60px;
   position: fixed;
   top: 0;
   left: 0;
@@ -1340,12 +1341,11 @@ footer p {
     display: block;
   }
 
-  .small__nav {
-    display: flex;
-    width: 80%;
-    align-items: center;
-    justify-content: flex-end;
-    position: relative;
+  .mobileMenuTop.hidden~#mobile__nav-items,
+  .mobileMenuTop.hidden~.mobileMenuBottom {
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
   }
 
   .blog__section>h3 {
