@@ -14,6 +14,7 @@
 
 /* (Start) 1. Global Variables */
 :root {
+  --g0: #dd23d1;
   --g1: #d91c50;
   --g2: #3450fa;
   --logo-red: #ff4057;
