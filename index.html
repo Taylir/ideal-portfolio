@@ -15,6 +15,7 @@
       src="https://kit.fontawesome.com/3f1e616f56.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
   </head>
 
   <body>
@@ -438,8 +439,8 @@
             <p>Have a question or just want to say hi?</p>
           </div>
           
-          <form onsubmit="contact(event)" class="contact__form">
-            
+          <form id="form" class="contact__form">
+
             <div class="form-left">
               <div class="input-group name__input">
                 <input
@@ -474,9 +475,10 @@
               <label class="input-value-textarea" for="message">message</label>
             </div>
 
-            <button class="submit-btn">
+            <button class="submit-btn" type="submit">
               send message <i class="fa-solid fa-paper-plane"></i>
             </button>
+            <div class="h-captcha" data-captcha="true"></div>
           </form>
 
           <div class="contact__loading">

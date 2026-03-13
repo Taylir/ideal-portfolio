@@ -138,3 +138,44 @@ function toggleMenu() {
 }
 //Above is the code for the small nav
 
+//Form info for web3forms
+const form = document.getElementById('form');
+const submitBtn = form.querySelector('button[type="submit"]');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+  formData.append("access_key", "5ca0427d-0664-4c4d-91c6-76929ee2ed76");
+
+  const originalText = submitBtn.textContent;
+
+  submitBtn.textContent = "Sending...";
+  submitBtn.disabled = true;
+
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+    const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+    if (response.ok && hCaptcha) {
+      alert("Success! Your message has been sent.");
+      form.reset();
+    } else if (!hCaptcha) {
+      e.preventDefault();
+      alert("Please fill out captcha field");
+      return;
+    } else {
+      alert("Error: " + data.message);
+    }
+  } catch (error) {
+    alert("Something went wrong. Please try again.");
+  } finally {
+    submitBtn.textContent = originalText;
+    submitBtn.disabled = false;
+  }
+});
