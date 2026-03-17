@@ -145,6 +145,13 @@ const submitBtn = form.querySelector('button[type="submit"]');
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
+  const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+  if (!hCaptcha) {
+    e.preventDefault();
+    alert("Please fill out captcha field");
+    return;
+  }
+
   const formData = new FormData(form);
   formData.append("access_key", "5ca0427d-0664-4c4d-91c6-76929ee2ed76");
 
@@ -160,15 +167,10 @@ form.addEventListener('submit', async (e) => {
     });
 
     const data = await response.json();
-    const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
 
-    if (response.ok && hCaptcha) {
+    if (response.ok) {
       alert("Success! Your message has been sent.");
       form.reset();
-    } else if (!hCaptcha) {
-      e.preventDefault();
-      alert("Please fill out captcha field");
-      return;
     } else {
       alert("Error: " + data.message);
     }
